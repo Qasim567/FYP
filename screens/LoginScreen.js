@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { View, Text, StyleSheet, TextInput, Image, Pressable, Dimensions, ScrollView } from 'react-native';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../firebase/firebase.config';
 function LoginScreen(props) {
+    const [email, setEmail] = useState(null);
+    const [password, setPassword] = useState(null)
+
+    const login = () => {
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                props.navigation.replace("TabHome");
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage)
+            });
+    }
     return (
         <LinearGradient style={styles.container} colors={['#4e0329', '#ddb52f']}>
             <ScrollView style={styles.container}>
@@ -21,17 +38,19 @@ function LoginScreen(props) {
                         style={styles.textInput}
                         placeholder='Enter your email'
                         keyboardType='email-address'
+                        onChangeText={(text) => setEmail(text)}
                     />
                     <Text style={styles.inputLabel}>Password</Text>
                     <TextInput
                         style={styles.textInput}
                         placeholder='Enter your password'
                         secureTextEntry={true}
+                        onChangeText={(text) => setPassword(text)}
                     />
                 </View>
                 <View style={styles.thirdView}>
                     <Pressable style={styles.button} android_ripple={{ color: '#210644' }}
-                        onPress={() => props.navigation.navigate('TabHome')}>
+                        onPress={() => login()}>
                         <Text style={styles.buttontext}>Sign in</Text>
                     </Pressable>
                     <View style={styles.innerView}>

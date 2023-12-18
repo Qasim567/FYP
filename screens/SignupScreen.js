@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { View, Text, StyleSheet, TextInput, Image, Pressable, Dimensions, ScrollView } from 'react-native';
-
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../firebase/firebase.config';
 function SignupScreen(props) {
+    const [email, setEmail] = useState(null);
+    const [password, setPassword] = useState(null)
+
+    const signup = () => {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                props.navigation.replace("TabHome");
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage)
+            });
+    }
+
     return (
         <LinearGradient style={styles.container} colors={['#4e0329', '#ddb52f']}>
             <ScrollView style={styles.container}>
@@ -28,13 +44,16 @@ function SignupScreen(props) {
                         style={styles.textInput}
                         placeholder='Enter your email'
                         keyboardType='email-address'
+                        onChangeText={(text) => setEmail(text)}
                     />
                     <Text style={styles.inputLabel}>Password</Text>
                     <TextInput
                         style={styles.textInput}
                         placeholder='Enter your password'
                         secureTextEntry={true}
+                        onChangeText={(text) => setPassword(text)}
                     />
+
                     <Text style={styles.inputLabel}>Confirm Password</Text>
                     <TextInput
                         style={styles.textInput}
@@ -44,7 +63,7 @@ function SignupScreen(props) {
                 </View>
                 <View style={styles.thirdView}>
                     <Pressable style={styles.button} android_ripple={{ color: '#210644' }}
-                        onPress={() => props.navigation.navigate('TabHome')}>
+                        onPress={() => signup()}>
                         <Text style={styles.buttontext}>Sign up</Text>
                     </Pressable>
                     <View style={styles.innerView}>
