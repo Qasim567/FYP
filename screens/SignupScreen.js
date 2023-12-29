@@ -3,19 +3,61 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { View, Text, StyleSheet, TextInput, Image, Pressable, Dimensions, ScrollView } from 'react-native';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase/firebase.config';
-function SignupScreen(props) {
-    const [email, setEmail] = useState(null);
-    const [password, setPassword] = useState(null)
+function SignupScreen({navigation}) {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [nameError, setNameError] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [confirmPasswordError, setConfirmPasswordError] = useState('');
+
+
+    const clearNameError = () => {
+        setNameError('');
+    };
+
+    const clearEmailError = () => {
+        setEmailError('');
+    };
+
+    const clearPasswordError = () => {
+        setPasswordError('');
+    };
+
+    const clearConfirmPasswordError = () => {
+        setConfirmPasswordError('');
+    };
 
     const signup = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                props.navigation.replace("TabHome");
+                navigation.replace("TabHome");
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                alert(errorMessage)
+                if (name === '') {
+                    setNameError('Name is Required');
+                }
+
+                if (email === '') {
+                    setEmailError('Email is Required');
+                } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+                    setEmailError('Email is Invalid');
+                }
+
+                if (password === '') {
+                    setPasswordError('Password is Required');
+                } else if (password.length !== 6) {
+                    setPasswordError('Password must be exactly 6 characters');
+                }
+
+                if (confirmPassword === '') {
+                    setConfirmPasswordError('Confirm Password is Required');
+                    isValid = false;
+                } else if (confirmPassword !== password) {
+                    setConfirmPasswordError('Passwords do not match');
+                }
             });
     }
 
@@ -38,28 +80,45 @@ function SignupScreen(props) {
                         style={styles.textInput}
                         placeholder='Enter your Name'
                         keyboardType='default'
+                        onChangeText={(text) => {
+                            setName(text);
+                            clearNameError();
+                        }}
                     />
+                    <Text style={{ color: 'red', paddingHorizontal: 31, fontSize: 13 }}>{nameError}</Text>
                     <Text style={styles.inputLabel}>Email</Text>
                     <TextInput
                         style={styles.textInput}
                         placeholder='Enter your email'
                         keyboardType='email-address'
-                        onChangeText={(text) => setEmail(text)}
+                        onChangeText={(text) => {
+                            setEmail(text);
+                            clearEmailError();
+                        }}
                     />
+                    <Text style={{ color: 'red', paddingHorizontal: 31, fontSize: 13 }}>{emailError}</Text>
                     <Text style={styles.inputLabel}>Password</Text>
                     <TextInput
                         style={styles.textInput}
                         placeholder='Enter your password'
                         secureTextEntry={true}
-                        onChangeText={(text) => setPassword(text)}
+                        onChangeText={(text) => {
+                            setPassword(text);
+                            clearPasswordError();
+                        }}
                     />
-
+                    <Text style={{ color: 'red', paddingHorizontal: 31, fontSize: 13 }}>{passwordError}</Text>
                     <Text style={styles.inputLabel}>Confirm Password</Text>
                     <TextInput
                         style={styles.textInput}
                         placeholder='Confirm your password'
                         secureTextEntry={true}
+                        onChangeText={(text) => {
+                            setConfirmPassword(text);
+                            clearConfirmPasswordError();
+                        }}
                     />
+                    <Text style={{ color: 'red', paddingHorizontal: 31, fontSize: 13 }}>{confirmPasswordError}</Text>
                 </View>
                 <View style={styles.thirdView}>
                     <Pressable style={styles.button} android_ripple={{ color: '#210644' }}
@@ -69,7 +128,7 @@ function SignupScreen(props) {
                     <View style={styles.innerView}>
                         <Text style={{ color: 'gray' }}>Already have an account?</Text>
                         <Pressable android_ripple={{ color: '#210644' }}
-                            onPress={() => props.navigation.navigate('Login')}>
+                            onPress={() => navigation.navigate('Login')}>
                             <Text style={styles.buttonText}>Login</Text>
                         </Pressable>
                     </View>

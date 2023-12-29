@@ -1,24 +1,43 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { View, Text, StyleSheet, TextInput, Image, Pressable, Dimensions, ScrollView } from 'react-native';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase/firebase.config';
-function LoginScreen(props) {
-    const [email, setEmail] = useState(null);
-    const [password, setPassword] = useState(null)
 
-    const login = () => {
+function LoginScreen({navigation}) {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
 
+    const clearEmailError = () => {
+        setEmailError('');
+    };
+
+    const clearPasswordError = () => {
+        setPasswordError('');
+    };
+
+    const login = async () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                props.navigation.replace("TabHome");
+                    navigation.replace('TabHome');
             })
             .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                alert(errorMessage)
+                if (email === '') {
+                    setEmailError('Email is Required');
+                } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+                    setEmailError('Email is Invalid');
+                }
+    
+                if (password === '') {
+                    setPasswordError('Password is Required');
+                } else if (password.length !== 6) {
+                    setPasswordError('Password must be exactly 6 characters');
+                }
             });
-    }
+    };
+    
     return (
         <LinearGradient style={styles.container} colors={['#4e0329', '#ddb52f']}>
             <ScrollView style={styles.container}>
@@ -38,15 +57,26 @@ function LoginScreen(props) {
                         style={styles.textInput}
                         placeholder='Enter your email'
                         keyboardType='email-address'
-                        onChangeText={(text) => setEmail(text)}
+                        onChangeText={(text) => {
+                            setEmail(text);
+                            clearEmailError();
+                        }}
                     />
+                    <Text style={{ color: 'red', paddingHorizontal: 31, fontSize: 13 }}>{emailError}</Text>
                     <Text style={styles.inputLabel}>Password</Text>
                     <TextInput
                         style={styles.textInput}
                         placeholder='Enter your password'
                         secureTextEntry={true}
-                        onChangeText={(text) => setPassword(text)}
+                        onChangeText={(text) => {
+                            setPassword(text);
+                            clearPasswordError();
+                        }}
                     />
+                    <Pressable>
+                        <Text>Forget Password</Text>
+                    </Pressable>
+                    <Text style={{ color: 'red', paddingHorizontal: 31, fontSize: 13 }}>{passwordError}</Text>
                 </View>
                 <View style={styles.thirdView}>
                     <Pressable style={styles.button} android_ripple={{ color: '#210644' }}
@@ -56,7 +86,7 @@ function LoginScreen(props) {
                     <View style={styles.innerView}>
                         <Text style={{ color: 'gray' }}>Don't have an account?</Text>
                         <Pressable android_ripple={{ color: '#210644' }}
-                            onPress={() => props.navigation.navigate('Signup')}>
+                            onPress={() => navigation.navigate('Signup')}>
                             <Text style={styles.buttonText}>Create Account</Text>
                         </Pressable>
                     </View>
