@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-import { View, Text, StyleSheet, TextInput, Image, Pressable, Dimensions, ScrollView } from 'react-native';
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { View, Text, StyleSheet, TextInput, Image, Pressable, Dimensions, ScrollView, Modal} from 'react-native';
+import { signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import { auth } from '../firebase/firebase.config';
 
-function LoginScreen({navigation}) {
+function LoginScreen({ navigation }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+    const [forgetPasswordModalVisible, setForgetPasswordModalVisible] = useState(false);
 
     const clearEmailError = () => {
         setEmailError('');
@@ -18,10 +19,20 @@ function LoginScreen({navigation}) {
         setPasswordError('');
     };
 
-    const login = async () => {
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                    navigation.replace('TabHome');
+    const handleForgetPassword = () => {
+
+        setEmail('');
+        setForgetPasswordModalVisible(true);
+    };
+
+    const closeForgetPasswordModal = () => {
+        setForgetPasswordModalVisible(false);
+    };
+
+    const login = () => {
+        signInWithEmailAndPassword(auth,email, password)
+        .then(userCredential => {
+            navigation.replace("TabHome")
             })
             .catch((error) => {
                 if (email === '') {
@@ -29,15 +40,36 @@ function LoginScreen({navigation}) {
                 } else if (!/^\S+@\S+\.\S+$/.test(email)) {
                     setEmailError('Email is Invalid');
                 }
-    
-                if (password === '') {
+                else if (password === '') {
                     setPasswordError('Password is Required');
-                } else if (password.length !== 6) {
+                }
+                else if (password.length !== 6) {
                     setPasswordError('Password must be exactly 6 characters');
+                }
+                else {
+                    setPasswordError('Incorrect Email or Password');
                 }
             });
     };
-    
+
+    const onSubmit = () => {
+        sendPasswordResetEmail(auth, email)
+            .then(() => {
+                alert('Password Reset Email has been sent Successfully')
+            })
+            .catch((error) => {
+                if (email === '') {
+                    alert('Email is Required');
+                }
+                else if (!/^\S+@\S+\.\S+$/.test(email)) {
+                    alert('Email is Invalid');
+                }
+                else {
+                    alert('Email does not exist');
+                }
+            });
+    }
+
     return (
         <LinearGradient style={styles.container} colors={['#4e0329', '#ddb52f']}>
             <ScrollView style={styles.container}>
@@ -73,8 +105,8 @@ function LoginScreen({navigation}) {
                             clearPasswordError();
                         }}
                     />
-                    <Pressable>
-                        <Text>Forget Password</Text>
+                    <Pressable onPress={handleForgetPassword}>
+                        <Text style={{ color: '#5e2c04', fontWeight: 'bold', marginTop: '1.5%', textAlign: 'right', marginRight: '5%' }}>Forget Password</Text>
                     </Pressable>
                     <Text style={{ color: 'red', paddingHorizontal: 31, fontSize: 13 }}>{passwordError}</Text>
                 </View>
@@ -91,6 +123,32 @@ function LoginScreen({navigation}) {
                         </Pressable>
                     </View>
                 </View>
+                <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={forgetPasswordModalVisible}
+                    onRequestClose={closeForgetPasswordModal}
+                >
+                    <View style={styles.modalContainer}>
+                        <View style={styles.modalContent}>
+                            <Text style={styles.modalHeading}>Forget Password</Text>
+                            <Text style={styles.modalText}>Enter your email</Text>
+                            <TextInput
+                                style={styles.modalTextInput}
+                                placeholder="Email"
+                                keyboardType="email-address"
+                                onChangeText={(text) => setEmail(text)}
+                            />
+                            <Pressable onPress={onSubmit}
+                                style={{ alignItems: 'center', backgroundColor: '#5e2c04', marginHorizontal: '7%', marginTop: '2%', borderRadius: 7 }}>
+                                <Text style={{ color: 'white' }}>Send email</Text>
+                            </Pressable>
+                            <Pressable onPress={closeForgetPasswordModal}>
+                                <Text style={styles.modalCloseText}>Close</Text>
+                            </Pressable>
+                        </View>
+                    </View>
+                </Modal>
             </ScrollView>
         </LinearGradient>
     );
@@ -167,6 +225,39 @@ const styles = StyleSheet.create({
         color: '#5e2c04',
         fontWeight: 'bold',
     },
+    modalContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    modalContent: {
+        backgroundColor: 'white',
+        padding: 20,
+        borderRadius: 10,
+        elevation: 5,
+    },
+    modalHeading: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginBottom: 10,
+    },
+    modalText: {
+        fontSize: 16,
+        marginBottom: 10,
+    },
+    modalTextInput: {
+        borderRadius: 8,
+        fontSize: 15,
+        backgroundColor: 'lightgray',
+        marginTop: 3,
+        paddingHorizontal: 8,
+    },
+    modalCloseText: {
+        color: '#5e2c04',
+        fontWeight: 'bold',
+        marginTop: 10,
+        textAlign: 'center',
+    }
 });
 
 export default LoginScreen;

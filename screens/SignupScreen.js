@@ -1,22 +1,13 @@
 import React, { useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-import { View, Text, StyleSheet, TextInput, Image, Pressable, Dimensions, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Image, Pressable, Dimensions, ScrollView} from 'react-native';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase/firebase.config';
 function SignupScreen({navigation}) {
-    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
-    const [nameError, setNameError] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
-    const [confirmPasswordError, setConfirmPasswordError] = useState('');
-
-
-    const clearNameError = () => {
-        setNameError('');
-    };
 
     const clearEmailError = () => {
         setEmailError('');
@@ -26,37 +17,25 @@ function SignupScreen({navigation}) {
         setPasswordError('');
     };
 
-    const clearConfirmPasswordError = () => {
-        setConfirmPasswordError('');
-    };
-
     const signup = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 navigation.replace("TabHome");
             })
             .catch((error) => {
-                if (name === '') {
-                    setNameError('Name is Required');
-                }
-
-                if (email === '') {
+                if (email === '') 
+                {
                     setEmailError('Email is Required');
-                } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+                } else if (!/^\S+@\S+\.\S+$/.test(email)) 
+                {
                     setEmailError('Email is Invalid');
                 }
-
-                if (password === '') {
+                if (password === '') 
+                {
                     setPasswordError('Password is Required');
-                } else if (password.length !== 6) {
+                } else if (password.length !== 6) 
+                {
                     setPasswordError('Password must be exactly 6 characters');
-                }
-
-                if (confirmPassword === '') {
-                    setConfirmPasswordError('Confirm Password is Required');
-                    isValid = false;
-                } else if (confirmPassword !== password) {
-                    setConfirmPasswordError('Passwords do not match');
                 }
             });
     }
@@ -75,17 +54,6 @@ function SignupScreen({navigation}) {
                     />
                 </View>
                 <View style={styles.secondView}>
-                    <Text style={styles.inputLabel}>Name</Text>
-                    <TextInput
-                        style={styles.textInput}
-                        placeholder='Enter your Name'
-                        keyboardType='default'
-                        onChangeText={(text) => {
-                            setName(text);
-                            clearNameError();
-                        }}
-                    />
-                    <Text style={{ color: 'red', paddingHorizontal: 31, fontSize: 13 }}>{nameError}</Text>
                     <Text style={styles.inputLabel}>Email</Text>
                     <TextInput
                         style={styles.textInput}
@@ -108,17 +76,6 @@ function SignupScreen({navigation}) {
                         }}
                     />
                     <Text style={{ color: 'red', paddingHorizontal: 31, fontSize: 13 }}>{passwordError}</Text>
-                    <Text style={styles.inputLabel}>Confirm Password</Text>
-                    <TextInput
-                        style={styles.textInput}
-                        placeholder='Confirm your password'
-                        secureTextEntry={true}
-                        onChangeText={(text) => {
-                            setConfirmPassword(text);
-                            clearConfirmPasswordError();
-                        }}
-                    />
-                    <Text style={{ color: 'red', paddingHorizontal: 31, fontSize: 13 }}>{confirmPasswordError}</Text>
                 </View>
                 <View style={styles.thirdView}>
                     <Pressable style={styles.button} android_ripple={{ color: '#210644' }}
