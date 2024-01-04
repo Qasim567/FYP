@@ -4,7 +4,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons'
-import { auth } from './firebase/firebase.config';
 import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import HomeScreen from './screens/HomeScreen';
@@ -29,8 +28,8 @@ function MyTabs() {
           backgroundColor: '#191919',
           borderTopWidth: 1,
           borderTopColor: 'lightgray',
-          borderTopLeftRadius:18,
-          borderTopRightRadius:18
+          borderTopLeftRadius:10,
+          borderTopRightRadius:10
         },
       }}
     >
@@ -107,7 +106,7 @@ export default function App() {
             }} />
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar style='light' />
+      <StatusBar style='dark' />
     </View>
   );
 }

@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
-import { View, Text, StyleSheet, TextInput, Image, Pressable, Dimensions, ScrollView, Modal} from 'react-native';
-import { signInWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
+import { View, Text, StyleSheet, TextInput, Image, 
+    Pressable, Dimensions, ScrollView, Modal, ActivityIndicator} from 'react-native';
+import { signInWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged } from "firebase/auth";
 import { auth } from '../firebase/firebase.config';
 
 function LoginScreen({ navigation }) {
+    const [user, setUser] = useState(null);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [forgetPasswordModalVisible, setForgetPasswordModalVisible] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const clearEmailError = () => {
         setEmailError('');
@@ -29,10 +32,24 @@ function LoginScreen({ navigation }) {
         setForgetPasswordModalVisible(false);
     };
 
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+          console.log("USER IS STILL LOGGED IN: ", user);
+          if (user) {
+            setLoading(false);
+            navigation.replace("TabHome");
+          } else {
+            setLoading(false);
+          }
+        });
+    
+        return () => unsubscribe();
+      }, [user, navigation]);
+
     const login = () => {
         signInWithEmailAndPassword(auth,email, password)
-        .then(userCredential => {
-            navigation.replace("TabHome")
+        .then((userCredential) => {
+            setUser(userCredential);
             })
             .catch((error) => {
                 if (email === '') {
@@ -69,6 +86,14 @@ function LoginScreen({ navigation }) {
                 }
             });
     }
+
+    if (loading) {
+        return (
+          <View style={styles.loadingContainer}>
+            <ActivityIndicator size="large" color="#5e2c04" />
+          </View>
+        );
+      }
 
     return (
         <LinearGradient style={styles.container} colors={['#4e0329', '#ddb52f']}>
@@ -158,6 +183,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
+    loadingContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      },
     firstView: {
         flex: 0.2,
         flexDirection: 'row',

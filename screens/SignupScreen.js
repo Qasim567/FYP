@@ -20,7 +20,7 @@ function SignupScreen({navigation}) {
     const signup = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                navigation.replace("TabHome");
+                navigation.replace("Login");
             })
             .catch((error) => {
                 if (email === '') 
