@@ -1,8 +1,27 @@
-import {Text,View,StyleSheet} from 'react-native'
-function ProfileScreen(){
+import React, { useState } from 'react';
+import {Text,View,StyleSheet, Pressable} from 'react-native'
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase/firebase.config';
+
+function ProfileScreen({navigation}){
+    
+    const handleLogout = () => {
+        signOut(auth)
+          .then(() => {
+            console.log('User logged out successfully:');
+            navigation.replace('Login')
+            setUser(null);
+          })
+          .catch((error) => {
+            console.log('Error', error);
+          });
+      };
+
     return(
         <View style={styles.container}>
-            <Text>Profile Screen</Text>
+            <Pressable onPress={handleLogout}>
+                <Text>Log out</Text>
+            </Pressable>
         </View>
     )
 }
