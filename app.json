@@ -23,8 +23,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/xyz.png",
+        "backgroundColor": "#1a1a1a"
       },
       "package": "com.m.qasim.Project",
       "permissions": [
@@ -35,6 +35,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0ae2c862-83d6-4f78-9b5e-036912b4436a"
+      }
     }
   }
 }

@@ -65,7 +65,7 @@ function MyTabs() {
         }}
       />
       <Tab.Screen
-        name="Profile"
+        name="Logout"
         component={ProfileScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
