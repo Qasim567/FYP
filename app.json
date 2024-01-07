@@ -23,7 +23,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/xyz.png",
+        "foregroundImage": "./assets/abc.png",
         "backgroundColor": "#1a1a1a"
       },
       "package": "com.m.qasim.Project",

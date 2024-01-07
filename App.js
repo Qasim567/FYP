@@ -8,6 +8,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons'
+import { FavoritesProvider } from './context/FavoritesContext';
 import LoginScreen from './screens/LoginScreen';
 import SignupScreen from './screens/SignupScreen';
 import HomeScreen from './screens/HomeScreen';
@@ -101,6 +102,7 @@ export default function App() {
     return null;
   }
   return ( 
+    <FavoritesProvider>
     <View style={styles.container}>
       <NavigationContainer>
         <Stack.Navigator>
@@ -133,6 +135,7 @@ export default function App() {
       </NavigationContainer>
       <StatusBar style='dark' />
     </View>
+    </FavoritesProvider>
   );
 }
 

@@ -22,7 +22,7 @@ function HomeScreen() {
                 />
         </View>
         <View style={styles.txtview}>
-        <Text style={styles.headertxt}>Discover Our Tasty {'\n'}Treats. Welcome!</Text>
+        <Text style={styles.headertxt}>Discover Our Tasty Treats. Welcome!</Text>
         </View>
         <FlatList 
         data={CATEGORIES}
@@ -54,12 +54,12 @@ image: {
 },
 txtview:{
   flex:0.15,
-  marginLeft:Dimensions.get('screen').width*0.03
 },
 headertxt:{
-  fontSize:20,
+  fontSize:25,
   fontWeight:'bold',
   fontStyle:'italic',
+  textAlign:'center'
 },
 })
 export default HomeScreen;
