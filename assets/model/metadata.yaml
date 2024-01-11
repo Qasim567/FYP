@@ -1,0 +1,21 @@
+description: Ultralytics best model trained on /content/drive/MyDrive/Bread and Buns/data.yaml
+author: Ultralytics
+license: AGPL-3.0 https://ultralytics.com/license
+date: '2023-09-22T13:52:10.214485'
+version: 8.0.184
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 608
+- 608
+names:
+  0: Brown Bread
+  1: Crossiant
+  2: Lemon Bread
+  3: MulriGrain Bun
+  4: MultiGrain Bread
+  5: Pav Bun
+  6: Plain Bread
+  7: Plain Bun
+  8: Sheermal
