@@ -1,25 +1,18 @@
-// SearchScreen.js
-import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React from "react";
+import {View,Text,StyleSheet} from 'react-native'
 
-const SearchScreen = () => {
-
-  
-  return (
-    <View style={styles.container}>
-     <Text>Prediction Screen</Text>
-   
+function SearchScreen(){
+  return(
+    <View style={style.container}>
+        <Text>Prediction Screen</Text>
     </View>
   );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+}
+const style=StyleSheet.create({
+  container:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center'
   }
-});
-
+})
 export default SearchScreen;
