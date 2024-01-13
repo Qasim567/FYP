@@ -10,7 +10,6 @@ function SearchScreen() {
 
   const handlePressButtonAsync = async () => {
     try {
-      // Open the image picker
       let result = await ImagePicker.launchImageLibraryAsync({
         mediaTypes: ImagePicker.MediaTypeOptions.Images,
         allowsEditing: true,
@@ -19,13 +18,9 @@ function SearchScreen() {
       });
 
       if (!result.canceled) {
-        // Set the selected image URI
         setImageUri(result.assets[0].uri);
-
-        // Get the MIME type of the selected image
         const imageType = result.assets[0].type;
 
-        // Send the image to the Flask server for prediction
         let formData = new FormData();
         formData.append('image', {
           uri: result.assets[0].uri,
