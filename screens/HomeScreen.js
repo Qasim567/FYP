@@ -56,7 +56,7 @@ txtview:{
   flex:0.15,
 },
 headertxt:{
-  fontSize:25,
+  fontSize:23.5,
   fontWeight:'bold',
   fontStyle:'italic',
   textAlign:'center'
