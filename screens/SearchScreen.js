@@ -12,25 +12,27 @@ function SearchScreen() {
     try {
       let result = await ImagePicker.launchImageLibraryAsync({
         mediaTypes: ImagePicker.MediaTypeOptions.Images,
-        allowsEditing: true,
+        allowsEditing: false,
         aspect: [4, 3],
         quality: 1,
       });
 
       if (!result.canceled) {
-        setImageUri(result.assets[0].uri);
-        const imageType = result.assets[0].type;
+        const selectedAsset = result.assets[0];
+
+        setImageUri(selectedAsset.uri);
+        const imageType = selectedAsset.mediaType;
 
         let formData = new FormData();
         formData.append('image', {
-          uri: result.assets[0].uri,
-          type: 'image/jpeg',
+          uri: selectedAsset.uri,
+          type: imageType === 'video' ? 'video/mp4' : 'image/jpeg',
           name: 'photo.jpg',
         });
 
         try {
           console.log('Sending Axios request...');
-          let response = await axios.post('http://192.168.0.101:5000/predict', formData, {
+          let response = await axios.post('http://192.168.0.101:5000', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
@@ -39,7 +41,7 @@ function SearchScreen() {
           setPredictionResult(response.data);
         } catch (axiosError) {
           console.error('Axios Error:', axiosError);
-          setError('Error during image prediction. Please try again.');
+          // setError('Error during image prediction. Please try again.');
         }
       }
     } catch (imagePickerError) {
@@ -57,6 +59,7 @@ function SearchScreen() {
           {predictionResult.map((prediction, index) => (
             <Text key={index} style={styles.resultText}>
               {prediction.class} - Confidence: {prediction.confidence}
+
             </Text>
           ))}
         </View>
@@ -86,6 +89,7 @@ const styles = StyleSheet.create({
   resultText: {
     fontSize: 16,
     marginVertical: 5,
+    textAlign:'center'
   },
   errorText: {
     color: 'red',
