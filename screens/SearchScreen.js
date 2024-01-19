@@ -32,7 +32,7 @@ function SearchScreen() {
 
         try {
           console.log('Sending Axios request...');
-          let response = await axios.post('http://192.168.0.101:5000', formData, {
+          let response = await axios.post('http://192.168.0.102:5000/predict', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
@@ -41,7 +41,7 @@ function SearchScreen() {
           setPredictionResult(response.data);
         } catch (axiosError) {
           console.error('Axios Error:', axiosError);
-          // setError('Error during image prediction. Please try again.');
+          setError('Error during image prediction. Please try again.');
         }
       }
     } catch (imagePickerError) {
@@ -56,11 +56,11 @@ function SearchScreen() {
       {predictionResult && (
         <View style={styles.resultContainer}>
           <Text style={styles.resultText}>Prediction Result:</Text>
-          {predictionResult.map((prediction, index) => (
-            <Text key={index} style={styles.resultText}>
-              {prediction.class} - Confidence: {prediction.confidence}
-
-            </Text>
+          {Object.entries(predictionResult).map(([className, { count, confidence }], index) => (
+            <View key={index}>
+              <Text style={styles.resultText}>{`${count} ${className}`}</Text>
+              <Text style={styles.resultText}>{`Confidence: ${confidence}`}</Text>
+            </View>
           ))}
         </View>
       )}
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   resultText: {
     fontSize: 16,
     marginVertical: 5,
-    textAlign:'center'
+    textAlign: 'center',
   },
   errorText: {
     color: 'red',
