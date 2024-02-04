@@ -32,7 +32,7 @@ function SearchScreen() {
 
         try {
           console.log('Sending Axios request...');
-          let response = await axios.post('http://192.168.243.193:5000/predict', formData, {
+          let response = await axios.post('http://192.168.0.105:5000/predict', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
