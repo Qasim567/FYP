@@ -27,9 +27,8 @@ export const FavoritesProvider = ({ children }) => {
 
   useEffect(() => {
     loadFavorites();
-  }, []); // Load favorites when the component mounts
+  }, []);
 
-  // Save favorites whenever the 'favorites' state changes
   useEffect(() => {
     saveFavorites(favorites);
   }, [favorites]);
