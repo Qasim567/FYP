@@ -60,8 +60,7 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://bakerbynature.com/wp-content/uploads/2018/05/extrathickandcreamycheesecake1234-1-of-1.jpg',
-		['Cream Cheese','Sugar','Eggs','Sour Cream','Vanilla Extract','Flour,Butter (for crust)',
-			'Graham Crackers (for crust)'],
+		['Cream Cheese','Sugar','Eggs','Sour Cream','Vanilla Extract','Flour,Butter (for crust)','Graham Crackers (for crust)'],
 		[
 			'Mix graham crackers, butter for crust',
 			'Press into a greased pan',
@@ -230,23 +229,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://food-images.files.bbci.co.uk/food/recipes/celebration_chocolate_18175_16x9.jpg',
+		['Cake mix', 'White chocolate', 'Cream', 'Sugar', 'Vanilla', 'Eggs', 'Oil'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Combine cake mix, eggs, oil, and water',
+			'Pour batter into greased cake pans',
+			'Bake until golden and springy to touch',
+			'Melt white chocolate in microwave or double boiler',
+			'Whip cream with sugar until stiff peaks form',
+			'Frost cooled cakes with whipped cream'
 		]
 	),
 	
@@ -258,22 +249,15 @@ export const MEALS = [
 		'simple',
 		'https://food-images.files.bbci.co.uk/food/recipes/easy_chocolate_cake_31070_16x9.jpg',
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
+			'Flour', 'Cocoa powder', 'Sugar', 'Baking powder', 'Salt', 'Eggs', 'Milk', 'Vegetable oil', 'Vanilla extract'],
 		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Mix dry ingredients in a bowl',
+			'Beat eggs, milk, oil, and vanilla',
+			'Combine wet and dry ingredients',
+			'Pour batter into greased cake pans',
+			'Bake until a toothpick comes out clean',
+			'Cool before frosting and serving'
 		]
 	),
 
@@ -284,23 +268,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://recipes.net/wp-content/uploads/2020/03/Salted-Caramel-Chocolate-Layer-Cake.jpg',
+		['Flour, Cocoa powder', 'Sugar', 'Baking powder', 'Salt', 'Eggs', 'Milk', 'Vegetable oil', 'Vanilla extract', 'Caramel sauce'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Combine dry ingredients in a bowl',
+			'Beat Eggs, Milk, Oil, and Vanilla',
+			'Mix wet and dry ingredients together',
+			'Pour batter into greased cake pans',
+			'Bake until a toothpick comes out clean',
+			'Cool, then spread caramel sauce over cake'
 		]
 	),
 
@@ -311,23 +287,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://vjcooks.com/wp-content/uploads/2021/07/Vjcooks_chocmoussecake13.jpg',
+		['Chocolate, Eggs', 'Sugar', 'Butter', 'Cream', 'Flour', 'Baking powder', 'Salt'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Melt Chocolate and Butter',
+			'Beat Eggs and Sugar until fluffy',
+			'Fold in melted Chocolate mixture',
+			'Mix Flour, Baking powder, and Salt',
+			'Fold dry ingredients into wet mixture',
+			'Pour batter into greased cake pan',
 		]
 	),
 
@@ -338,23 +306,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://sugargeekshow.com/wp-content/uploads/2022/08/vanilla_cupcake_featured_blog.jpg',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Milk', 'Baking powder', 'Vanilla extract', 'Salt'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until fluffy',
+			'Add Eggs one at a time, beating well',
+			'Mix in Vanilla extract',
+			'Combine Flour, Baking powder, and Salt',
+			'Alternate adding Flour mixture and Milk to the batter',
+			'Pour batter into lined cupcake trays',
 		]
 	),
 
@@ -365,23 +325,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://hips.hearstapps.com/hmg-prod/images/fruit-cake-recipe-1630084221.jpg?crop=0.675xw:1.00xh;0.137xw,0&resize=1200:*',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Mixed fruit', 'Nuts', 'Baking powder', 'Cinnamon'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until light',
+			'Beat in Eggs one at a time',
+			'Fold in Flour and Baking powder',
+			'Mix in Mixed fruit, Nuts, and Cinnamon',
+			'Pour batter into greased cake pan',
+			'Bake until a skewer comes out clean'
 		]
 	),
 	
@@ -392,23 +344,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://d2sbytayo4rkgk.cloudfront.net/eyJidWNrZXQiOiJwcm9kLWZlcmd1c29ucGxhcnJlLWFzc2V0cyIsImtleSI6ImNhdGFsb2cvcHJvZHVjdC9mL2wvZmxvdXJsZXNzLWljZS1jcmVhbS1iaXJ0aGRheS1jYWtlLmpwZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6NTAwLCJoZWlnaHQiOjUwMCwiZml0IjoiY29udGFpbiIsImJhY2tncm91bmQiOnsiciI6MjU1LCJnIjoyNTUsImIiOjI1NSwiYWxwaGEiOjF9fX19',
+		['Ice cream', 'Cake layers', 'Chocolate sauce', 'Whipped cream', 'Sprinkles', 'Cherries', 'Cookies'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Place one cake layer in the bottom of a springform pan',
+			'Spread softened ice cream over the cake layer',
+			'Drizzle with chocolate sauce',
+			'Add another cake layer on top',
+			'Freeze until firm',
+			'Frost with whipped cream',
+			'Decorate with sprinkles and cherries'
 		]
 	),
 
@@ -419,23 +363,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://assets.bonappetit.com/photos/57acf4a41b33404414975396/1:1/w_4096,h_4096,c_limit/Staged_Cakes_Birthday_High_2.jpg',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Milk', 'Baking powder', 'Vanilla extract', 'Salt', 'Frosting'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until fluffy',
+			'Beat in Eggs one at a time',
+			'Mix in Vanilla extract',
+			'Alternate adding Flour mixture and Milk to the batter',
+			'Pour batter into greased cake pans',
+			'Bake until golden and a toothpick comes out clean'
 		]
 	),
 
@@ -446,23 +382,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://preppykitchen.com/wp-content/uploads/2022/06/Lemon-Cake-Recipe.jpg',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Lemon juice', 'Lemon zest', 'Baking powder', 'Salt', 'Milk'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until light',
+			'Beat in Eggs one at a time',
+			'Mix in Lemon juice and zest',
+			'Combine Flour, Baking powder, and Salt',
+			'Alternate adding Flour mixture and Milk to the batter',
+			'Pour batter into greased cake pans',
 		]
 	),
 
@@ -473,23 +401,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://schoolnightvegan.com/wp-content/uploads/2022/10/vegan-marble-cake-23.jpg',
+		[ 'Flour', 'Sugar', 'Eggs', 'Butter', 'Milk', 'Cocoa powder', 'Baking powder', 'Vanilla extract', 'Salt'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until fluffy',
+			'Beat in Eggs one at a time',
+			'Mix in Vanilla extract',
+			'Alternate adding Flour mixture and Milk to the batter',
+			'Divide batter in half, mix cocoa powder into one half',
+			'Pour batters into greased cake pans, swirl with a knife'
 		]
 	),
 
@@ -500,23 +420,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://newtownbakers.pk/wp-content/uploads/2020/12/1p_pineapple-min.jpg',
+		['Flour', 'Sugar', 'Eggs',' Butter', 'Pineapple', 'Baking powder', 'Vanilla extract', 'Salt'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until light',
+			'Beat in Eggs one at a time',
+			'Mix in Vanilla extract',
+			'Fold in diced Pineapple',
+			'Combine Flour, Baking powder, and Salt',
+			'Alternate adding Flour mixture and Milk to the batter'
 		]
 	),
 
@@ -527,23 +439,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://sugarspunrun.com/wp-content/uploads/2023/08/Pistachio-Cake-1-of-1.jpg',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Pistachios', 'Baking powder', 'Vanilla extract', 'Milk'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until fluffy',
+			'Beat in Eggs one at a time',
+			'Mix in Vanilla extract',
+			'Fold in chopped Pistachios',
+			'Combine Flour and Baking powder',
+			'Alternate adding Flour mixture and Milk to the batter'
 		]
 	),
 
@@ -554,23 +458,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://img.taste.com.au/BYEcPquu/taste/2010/01/easy-vanilla-butter-cake_1980x1320-118393-1.jpg',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Milk', 'Baking powder', 'Vanilla extract', 'Salt'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until fluffy',
+			'Beat in Eggs one at a time',
+			'Mix in Vanilla extract',
+			'Combine Flour, Baking powder, and Salt',
+			'Alternate adding Flour mixture and Milk to the batter',
+			'Pour batter into greased cake pans'
 		]
 	),
 
@@ -581,23 +477,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://preppykitchen.com/wp-content/uploads/2022/05/Strawberry-Cake-Recipe-Card-500x500.jpg',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Strawberries', 'Baking powder', 'Vanilla extract', 'Milk'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until light',
+			'Beat in Eggs one at a time',
+			'Mix in Vanilla extract',
+			'Puree Strawberries and add to batter',
+			'Combine Flour and Baking powder',
+			'Alternate adding Flour mixture and Milk to the batter'
 		]
 	),
 
@@ -608,23 +496,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://chatelaine.com/wp-content/uploads/2023/09/vanilla-yellow-layer-cake-recipe-960.jpg',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Vanilla extract', 'Baking powder', 'Milk', 'Salt'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until fluffy',
+			'Beat in Eggs one at a time',
+			'Mix in Vanilla extract',
+			'Combine Flour, Baking powder, and Salt',
+			'Alternate adding Flour mixture and Milk to the batter',
+			'Pour batter into greased cake pans'
 		]
 	),
 
@@ -635,23 +515,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.marthastewart.com/thmb/qYuuiq6bl00ge9kpqRHP5OSmANA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/med104694_0509_choc_cake_vert-b112e79dc6c04cc38439f9fc020ea4c3.jpgitokrk_3uYdK',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Cocoa powder', 'Baking powder', 'Vanilla extract', 'Milk', 'Whipped cream'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
-		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until light',
+			'Beat in Eggs one at a time',
+			'Mix in Cocoa powder and Vanilla extract',
+			'Combine Flour and Baking powder',
+			'Alternate adding Flour mixture and Milk to the batter',
+			'Fold in whipped cream until just combined'
 		]
 	),
 
@@ -662,23 +534,210 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://img.taste.com.au/F32qj9kj/w1200-h630-cfill/taste/2016/11/white-christmas-angel-cake-with-rose-and-prosecco-syrup-106299-1.jpeg',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Cream', 'Vanilla extract', 'Baking powder', 'Salt'],
 		[
-			'Arugula',
-			"Lamb's Lettuce",
-			'Parsley',
-			'Fennel',
-			'200g Smoked Salmon',
-			'Mustard',
-			'Balsamic Vinegar',
-			'Olive Oil',
-			'Salt and Pepper'
-		],
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until fluffy',
+			'Beat in Eggs one at a time',
+			'Mix in Vanilla extract',
+			'Combine Flour, Baking powder, and Salt',
+			'Alternate adding Flour mixture and Cream to the batter',
+			'Pour batter into greased cake pans'
+		]
+	),
+
+	new Meal(
+		'ca30',
+		[ 'c1' ],
+		'Apple Pie Cake',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-55.png',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Apples', 'Cinnamon', 'Baking powder', 'Vanilla extract', 'Milk'],
 		[
-			'Wash and cut salad and herbs',
-			'Dice the salmon',
-			'Process mustard, vinegar and olive oil into a dessing',
-			'Prepare the salad',
-			'Add salmon cubes and dressing'
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until light',
+			'Beat in Eggs one at a time',
+			'Mix in Vanilla extract and Cinnamon',
+			'Peel, core, and slice Apples',
+			'Combine Flour and Baking powder',
+			'Alternate adding Flour mixture and Milk to the batter',
+		]
+	),
+
+	new Meal(
+		'ca32',
+		[ 'c1' ],
+		'Caramel Crunch Cake',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-5.png',
+		[ 'Flour', 'Sugar', 'Eggs', 'Butter', 'Caramel sauce', 'Crunchy cereal', 'Baking powder', 'Vanilla extract', 'Milk'],
+		[
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until light',
+			'Beat in Eggs one at a time',
+			'Mix in Vanilla extract',
+			'Combine Flour and Baking powder',
+			'Alternate adding Flour mixture and Milk to the batter',
+			'Fold in Caramel sauce and Crunchy cereal'
+		]
+	),
+
+	new Meal(
+		'ca33',
+		[ 'c1' ],
+		'Coffee Mousse Cake',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-7.png',
+		[ 'Flour', 'Sugar', 'Eggs', 'Butter', 'Coffee powder', 'Heavy cream', 'Gelatin', 'Vanilla extract', 'Chocolate shavings'],
+		[
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until light',
+			'Beat in Eggs one at a time',
+			'Dissolve Coffee powder in hot water, let cool',
+			'Mix in Vanilla extract',
+			'Combine Flour and Baking powder',
+			'Alternate adding Flour mixture and Coffee to the batter',
+			'Bake until a toothpick comes out clean',
+			'Dissolve Gelatin in water, let cool slightly',
+			'Whip Heavy cream until soft peaks form',
+			'Fold in Gelatin mixture,',
+			'Layer cake with Coffee mousse',
+			'Garnish with Chocolate shavings before serving'
+		]
+	),
+
+	new Meal(
+		'ca34',
+		[ 'c1' ],
+		'Rafello Cake',
+		'affordable',
+		'simple',
+		'https://meer.com.pk/wp-content/uploads/2023/11/untitled-13.png',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Almond flour', 'Coconut flakes', 'Baking powder', 'Vanilla extract', 'Milk', 'White chocolate', 'Cream cheese', 'Powdered sugar', 'Rafello chocolates'],
+		[
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until light',
+			'Beat in Eggs one at a time',
+			'Mix in Vanilla extract',
+			'Combine Flour, Almond flour, Baking powder, and Coconut flakes',
+			'Alternate adding Flour mixture and Milk to the batter',
+			'Pour batter into greased cake pans',
+			'Bake until golden and a toothpick comes out clean',
+			'Let cool completely before frosting',
+			'Melt White chocolate in a double boiler',
+			'Beat Cream cheese until smooth, then mix in Powdered sugar',
+			'Fold in melted White chocolate',
+			'Spread frosting between cake layers and on top',
+			'Garnish with Rafello chocolates before serving'
+		]
+	),
+
+	new Meal(
+		'ca36',
+		[ 'c1' ],
+		'Red Velvet Cake',
+		'affordable',
+		'simple',
+		'https://meer.com.pk/wp-content/uploads/2023/11/untitled-18.png',
+		[ 'Flour', 'Sugar', 'Eggs', 'Butter', 'Buttermilk', 'Cocoa powder', 'Red food coloring', 'Vanilla extract', 'Baking soda', 'Vinegar', 'Salt', 'Cream cheese', 'Powdered sugar', 'Vanilla extract'],
+		[
+			'Preheat oven to desired temperature',
+			'Cream Butter and Sugar until light',
+			'Beat in Eggs one at a time',
+			'Mix in Vanilla extract and Red food coloring',
+			'Combine Flour, Cocoa powder, and Salt',
+			'Alternate adding Flour mixture and Buttermilk to the batter',
+			'Dissolve Baking soda in Vinegar, then fold into batter',
+			'Pour batter into greased cake pans',
+			'Bake until a toothpick comes out clean',
+			'Let cool completely before frosting',
+			'Beat Cream cheese until smooth',
+			'Mix in Powdered sugar and Vanilla extract until creamy',
+			'Spread frosting between cake layers and on top',
+			'Refrigerate before serving for best results'
+		]
+	),
+
+	new Meal(
+		'ca37',
+		[ 'c1' ],
+		'Hazelnut Cake',
+		'affordable',
+		'simple',
+		'https://meer.com.pk/wp-content/uploads/2023/11/untitled-9.png',
+		['Hazelnut flour', 'Sugar', 'Eggs', 'Butter', 'Vanilla extract', 'Baking powder', 'Salt', 'Milk'],
+		[
+			'Preheat oven', 
+			'Mix dry ingredients', 
+			'Cream butter and sugar', 
+			'Add eggs and vanilla', 
+			'Alternate dry mixture and milk', 
+			'Pour batter into pans', 
+			'Bake until done'
+		]
+	),
+
+	new Meal(
+		'ca38',
+		[ 'c1' ],
+		'Lemon Tart Almomd Cake',
+		'affordable',
+		'simple',
+		'https://meer.com.pk/wp-content/uploads/2023/11/untitled-31.jpg',
+		['Almond flour', 'Sugar', 'Eggs', 'Butter', 'Lemon zest', 'Lemon juice', 'Vanilla extract', 'Baking powder', 'Salt'],
+		[
+			'Preheat oven', 
+			'Mix almond flour, sugar, baking powder', 
+			'Cream butter and sugar', 
+			'Beat in eggs, lemon zest, vanilla', 
+			'Fold in dry ingredients and lemon juice', 
+			'Pour batter into greased cake pans', 
+			'Bake until golden and firm'
+		]
+	),
+
+	new Meal(
+		'ca39',
+		[ 'c1' ],
+		'Tiramisu Coffee Cake',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-55.pnghttps://meer.com.pk/wp-content/uploads/2023/11/untitled-122-scaled-1-585x780.jpg',
+		[ 'Flour', 'Sugar', 'Eggs', 'Butter', 'Coffee powder', 'Mascarpone cheese', 'Vanilla extract', 'Baking powder', 'Salt', 'Milk', 'Cocoa powder', 'Espresso', 'Rum (optional)'],
+		[
+			'Preheat oven', 
+			'Mix flour, baking powder, and salt', 
+			'Cream butter and sugar', 
+			'Beat in eggs, vanilla, and coffee powder', 
+			'Alternate adding dry mixture and milk', 
+			'Pour batter into greased cake pans', 
+			'Bake until golden and springy', 
+			'Mix mascarpone with cocoa powder and espresso', 
+			'Spread mixture between cake layers', 
+			'Optional: drizzle rum over layers', 'Chill before serving'
+		]
+	),
+
+	new Meal(
+		'ca40',
+		[ 'c1' ],
+		'Walnut Pie Cake',
+		'affordable',
+		'simple',
+		'https://meer.com.pk/wp-content/uploads/2023/11/untitled-57.png',
+		['Flour', 'Sugar', 'Eggs', 'Butter', 'Walnuts', 'Vanilla extract', 'Baking powder', 'Salt', 'Milk'],
+		[
+			'Preheat oven', 
+			'Mix flour, baking powder, and salt', 
+			'Cream butter and sugar', 
+			'Beat in eggs and vanilla', 
+			'Fold in chopped walnuts', 
+			'Alternate adding dry mixture and milk', 
+			'Pour batter into greased cake pans', 
+			'Bake until golden and firm'
 		]
 	),
 
@@ -1019,6 +1078,212 @@ export const MEALS = [
 			'Mix in  cumin seeds (zeera)',
 			'Form into cookies',
 			'Bake until edges golden'
+		]
+	),
+
+	new Meal(
+		'co20',
+		[ 'c2' ],
+		'Almomd Macroni',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/15-1.png',
+		['Macaroni pasta','Almonds','Butter','Flour','Milk','Salt and pepper','Grated cheese (optional)','Parsley (for garnish)'],
+		[
+			'Cream butter, sugar',
+			'Add egg, mix',
+			'Combine flour, baking powder, salt',
+			'Mix in  cumin seeds (zeera)',
+			'Form into cookies',
+			'Bake until edges golden'
+		]
+	),
+
+	new Meal(
+		'co21',
+		[ 'c2' ],
+		'Badam Khatai',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/20-1.png',
+		['Almond flour', 'Sugar', 'Ghee (Clarified butter)', 'Cardamom powder', 'Baking powder', 'Saffron strands (optional)', 'Milk (optional)'],
+		[
+			'Preheat oven to desired temperature',
+			'Mix almond flour, sugar, cardamom powder, and baking powder in a bowl',
+			'Add ghee to the mixture and knead into a smooth dough',
+			'If the dough is too dry, add a little milk to bring it together (optional)',
+			'Divide the dough into small portions and shape them into round balls or flatten them slightly into discs',
+			'Place the dough balls on a baking sheet lined with parchment paper',
+			'Press a saffron strand onto the top of each khatai (optional)',
+			'Bake in the preheated oven until the khatais are golden brown on the edges',
+			'Allow them to cool completely before serving'
+		]
+	),
+
+	new Meal(
+		'co22',
+		[ 'c2' ],
+		'Bunty Cookie',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-26.png',
+		['Flour', 'Sugar', 'Butter', 'Almonds', 'Pistachios', 'Cardamom powder', 'Baking powder', 'Rose water'],
+		[
+			'Preheat oven to desired temperature',
+			'Cream butter and sugar until light and fluffy',
+			'Chop almonds and pistachios finely',
+			'Mix chopped nuts, cardamom powder, and baking powder with flour',
+			'Gradually add dry ingredients to the creamed butter and sugar mixture',
+			'Add rose water and mix until a dough forms',
+			'Roll dough into small balls and place them on a baking sheet lined with parchment paper',
+			'Flatten each ball slightly with the back of a spoon',
+			'Bake in the preheated oven until the edges are lightly golden',
+			'Allow bunties to cool on a wire rack before serving'
+		]
+	),
+
+	new Meal(
+		'co23',
+		[ 'c2' ],
+		'Cake Rusk',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/19-1.png',
+		[ 'Flour', 'Sugar', 'Butter', 'Eggs', 'Baking powder', 'Vanilla extract', 'Salt'],
+		[
+			'Preheat oven',
+			'Cream butter and sugar until light and fluffy',
+			'Beat in eggs one at a time, then mix in vanilla extract',
+			'Combine flour, baking powder, and salt',
+			'Gradually add dry ingredients to the butter mixture',
+			'Mix until a dough forms',
+			'Form dough into a log shape and place on a baking sheet',
+			'Bake until golden brown and firm',
+			'Slice the baked log into thin slices',
+			'Place the slices back on the baking sheet and bake again until crispy',
+			'Allow to cool completely before serving'
+		]
+	),
+
+	new Meal(
+		'co24',
+		[ 'c2' ],
+		'Chana Cookie',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-24.png',
+		['Chickpea flour (Besan)', 'Sugar', 'Ghee (Clarified butter)', 'Cardamom powder', 'Baking powder', 'Salt'],
+		[
+			'Preheat oven',
+			'Mix chickpea flour, sugar, cardamom powder, baking powder, and salt',
+			'Add melted ghee to the dry ingredients',
+			'Knead until a dough forms',
+			'Roll out the dough and cut into desired shapes',
+			'Place on a baking sheet lined with parchment paper',
+			'Bake until the edges are golden brown',
+			'Allow to cool before serving'
+		]
+	),
+
+	new Meal(
+		'co25',
+		[ 'c2' ],
+		'Cold Coffee Cookie',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/28.png',
+		['Flour', 'Butter', 'Sugar', 'Instant coffee powder', 'Milk', 'Baking powder', 'Salt'],
+		[
+			'Preheat oven',
+			'Dissolve instant coffee powder in milk',
+			'Cream butter and sugar until light and fluffy',
+			'Mix in the coffee-milk mixture',
+			'Combine flour, baking powder, and salt',
+			'Gradually add dry ingredients to the butter mixture',
+			'Mix until well combined to form a dough',
+			'Drop spoonfuls of dough onto baking sheets',
+			'Bake until cookies are set and edges are lightly golden',
+			'Allow to cool completely before serving'
+		]
+	),
+
+	new Meal(
+		'co26',
+		[ 'c2' ],
+		'Cold Pista',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/11-1.png',
+		['Flour', 'Butter', 'Sugar', 'Pistachios', 'Cardamom powder', 'Baking powder', 'Salt'],
+		[
+			'Preheat oven',
+			'Grind pistachios into a coarse powder',
+			'Cream butter and sugar until fluffy',
+			'Mix in ground pistachios and cardamom powder',
+			'Combine flour, baking powder, and salt',
+			'Gradually add dry ingredients to the butter mixture',
+			'Form dough into small balls and flatten slightly',
+			'Place on a baking sheet',
+			'Bake until cookies are set and edges are golden brown',
+			'Allow to cool completely before serving'
+		]
+	),
+
+	new Meal(
+		'co27',
+		[ 'c2' ],
+		'English Cookie',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/24.png',
+		[ 'Flour', 'Butter', 'Sugar', 'Eggs', 'Baking powder', 'Vanilla extract', 'Salt'],
+		[
+			'Preheat oven',
+			'Cream butter and sugar until light',
+			'Beat in eggs and vanilla extract',
+			'Mix flour, baking powder, and salt',
+			'Combine wet and dry ingredients',
+			'Drop spoonfuls of dough onto baking sheets',
+			'Bake until golden brown',
+			'Let cool before serving'
+		]
+	),
+
+	new Meal(
+		'co28',
+		[ 'c2' ],
+		'Kalwanji Cookie',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/16-1.png',
+		[ 'Flour', 'Butter', 'Sugar', 'Kalwanji (Nigella seeds)', 'Baking powder', 'Salt', 'Milk'],
+		[
+			'Preheat oven',
+			'Mix flour, sugar, kalwanji, baking powder, and salt',
+			'Cut in butter until crumbly',
+			'Gradually add milk to form a dough',
+			'Roll out dough and cut into desired shapes',
+			'Place on a baking sheet',
+			'Bake until golden brown',
+			'Let cool before serving'
+		]
+	),
+
+	new Meal(
+		'co29',
+		[ 'c2' ],
+		'Til Khatai',
+		'affordable',
+		'simple',
+		'https://meer.com.pk/wp-content/uploads/2023/11/23.png',
+		['Flour', 'Sesame seeds', 'Sugar', 'Ghee', 'Cardamom powder', 'Baking soda', 'Salt'],
+		[
+			'Preheat oven', 'Mix flour, sesame seeds, sugar, cardamom powder, baking soda, and salt', 
+			'Add melted ghee to form a dough', 
+			'Shape dough into small balls', 
+			'Press gently to flatten', 
+			'Bake until golden brown', 
+			'Let cool before serving'
 		]
 	),
 
