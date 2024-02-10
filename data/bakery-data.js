@@ -1450,6 +1450,396 @@ export const MEALS = [
 	),
 
 	new Meal(
+		'p10',
+		[ 'c3' ],
+		'Caramel Fudge Pastry',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-42.png',
+		[ 'Puff pastry sheets', 'Caramel sauce', 'Chocolate chips or chunks', 'Chopped nuts (optional)', 'Egg wash (optional)'],
+		[
+			'Preheat oven to specified temperature',
+			'Unroll pastry on floured surface',
+			'Cut into squares or rectangles',
+			'Place caramel, chocolate, nuts on each piece',
+			'Fold into triangles or rectangles',
+			'Press edges to seal',
+			'Place on lined baking sheet',
+			'Optional: Brush with egg wash',
+			'Bake until golden brown',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p11',
+		[ 'c3' ],
+		'Choclate Chip Pastry',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-40.png',
+		['Puff pastry sheets', 'Chocolate chips', 'Egg wash (optional)'],
+		[
+			'Preheat oven to specified temperature',
+			'Unroll pastry on floured surface',
+			'Sprinkle chocolate chips evenly over pastry',
+			'Roll up pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p12',
+		[ 'c3' ],
+		'Double Fudge Pastry',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-37.png',
+		['Puff pastry sheets', 'Cocoa powder', 'Chocolate chips', 'Brown sugar', 'Butter', 'Vanilla extract', 'Egg wash (optional)'],
+		[
+			'Preheat oven to specified temperature',
+			'In a saucepan, melt butter over low heat',
+			'Add cocoa powder, brown sugar, and vanilla extract',
+			'Stir until smooth and well combined',
+			'Remove from heat and let cool slightly',
+			'Unroll pastry on floured surface',
+			'Spread the chocolate mixture evenly over the pastry',
+			'Sprinkle chocolate chips over the mixture',
+			'Roll up pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p13',
+		[ 'c3' ],
+		'Lemon Tart Dry Pastry',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-182.png',
+		['Flour', 'Butter', 'Powdered sugar', 'Lemon zest', 'Salt', 'Egg yolk'],
+		[
+			'Preheat oven to specified temperature',
+			'Combine flour, powdered sugar, lemon zest, and salt in a bowl',
+			'Cut in butter until mixture resembles coarse crumbs',
+			'Mix in egg yolk until dough comes together',
+			'Press dough evenly into a tart pan',
+			'Poke holes in the bottom of the dough with a fork',
+			'Bake until lightly golden brown and crisp',
+			'Cool completely before filling'
+		]
+	),
+
+	new Meal(
+		'p14',
+		[ 'c3' ],
+		'Raffaello Pastry',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-38.png',
+		[ 'Puff pastry sheets', 'Almond flour', 'Coconut flakes', 'Sugar', 'Butter', 'Vanilla extract', 'White chocolate chips', 'Whole almonds', 'Egg wash (optional)'],
+		[
+			'Preheat oven to specified temperature',
+			'In a bowl, mix almond flour, coconut flakes, sugar, melted butter, and vanilla extract',
+			'Roll out puff pastry on floured surface',
+			'Spread the almond-coconut mixture evenly over the pastry',
+			'Sprinkle white chocolate chips over the mixture',
+			'Place whole almonds on top of the mixture',
+			'Roll up pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p15',
+		[ 'c3' ],
+		'Red Velvet Pastry',
+		'affordable',
+		'simple',
+		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-39.png',
+		['Puff pastry sheets', 'Cocoa powder', 'Red food coloring', 'Vanilla extract', 'Sugar', 'Butter', 'Cream cheese', 'Powdered sugar', 'Egg wash (optional)'],
+		[
+			'Preheat oven to specified temperature',
+			'In a bowl, mix cocoa powder, red food coloring, and vanilla extract until smooth',
+			'In another bowl, cream together sugar and butter until light and fluffy',
+			'Gradually add cocoa mixture to the creamed butter mixture, mixing well',
+			'Roll out puff pastry on floured surface',
+			'Spread the red velvet mixture evenly over the pastry',
+			'Dollop cream cheese mixture over the red velvet layer',
+			'Roll up pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p16',
+		[ 'c3' ],
+		'Stawbery Icing Pastry',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/05/strawberry_icing_pastry-1.png',
+		['Puff pastry sheets', 'Strawberries', 'Sugar', 'Cornstarch', 'Lemon juice', 'Vanilla extract', 'Egg wash'],
+		[
+			'Preheat oven to specified temperature',
+			'In a saucepan, combine chopped strawberries, sugar, cornstarch, and lemon juice',
+			'Cook over medium heat until strawberries break down and mixture thickens',
+			'Remove from heat and stir in vanilla extract',
+			'Let strawberry mixture cool slightly',
+			'Roll out puff pastry on floured surface',
+			'Spread the cooled strawberry mixture evenly over the pastry',
+			'Roll up pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p17',
+		[ 'c3' ],
+		'Vanilla Icing Pastry',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/05/vanilla_icing_pastry.png',
+		['Puff pastry sheets', 'Powdered sugar', 'Butter', 'Milk', 'Vanilla extract', 'Salt', 'Egg wash'],
+		[
+			'Preheat oven to specified temperature',
+			'In a bowl, whisk together powdered sugar, melted butter, milk, vanilla extract, and a pinch of salt until smooth',
+			'Roll out puff pastry on floured surface',
+			'Spread the vanilla icing evenly over the pastry',
+			'Roll up pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p18',
+		[ 'c3' ],
+		'Coffee Fudge Pastry',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/05/coffee_fudge.png',
+		['Puff pastry sheets', 'Instant coffee powder', 'Butter', 'Brown sugar', 'Heavy cream', 'Vanilla extract', 'Salt'],
+		[
+			'Preheat oven to specified temperature',
+			'Dissolve instant coffee powder in hot water',
+			'In a saucepan, melt butter over medium heat',
+			'Stir in brown sugar, heavy cream, vanilla extract, and a pinch of salt',
+			'Cook until mixture thickens slightly',
+			'Remove from heat and stir in dissolved coffee mixture',
+			'Let coffee fudge mixture cool slightly',
+			'Roll out puff pastry on floured surface',
+			'Spread the coffee fudge mixture evenly over the pastry',
+			'Roll up pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p19',
+		[ 'c3' ],
+		'Choclate Cream Roll',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/chocalte_creamroll-1-248x300-1.png',
+		['Cake flour', 'Cocoa powder', 'Baking powder', 'Salt', 'Eggs', 'Granulated sugar', 'Vanilla extract', 'Milk', 'Butter', 'Heavy cream', 'Powdered sugar', 'Dark chocolate chips'],
+		[
+			'Preheat oven, grease and line jelly roll pan',
+			'Sift dry ingredients',
+			'Beat eggs and sugar until thick',
+			'Add vanilla, fold in dry ingredients, milk, and melted butter',
+			'Pour batter into pan, bake until set',
+			'Invert cake onto powdered sugar-dusted towel',
+			'Roll cake in towel, let cool',
+			'Whip heavy cream with powdered sugar, fold in melted chocolate',
+			'Unroll cooled cake, spread filling',
+			'Roll cake, refrigerate before serving'
+		]
+	),
+
+	new Meal(
+		'p20',
+		[ 'c3' ],
+		'Coconut Pastry',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/coconut_pastry-1.png',
+		[ 'Puff pastry sheets', 'Shredded coconut', 'Sugar', 'Butter', 'Egg wash (optional)'],
+		[
+			'Preheat oven to specified temperature',
+			'In a bowl, mix shredded coconut and sugar',
+			'Melt butter and brush over the puff pastry',
+			'Sprinkle the coconut mixture evenly over the pastry',
+			'Roll up the pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on a lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p21',
+		[ 'c3' ],
+		'Cheese Pastry',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/cheese_pastry.png',
+		[ 'Puff pastry sheets', 'Cheese (such as Cheddar or Gruyere)', 'Egg wash (optional)'],
+		[
+			'Preheat oven to specified temperature',
+			'Grate or thinly slice cheese',
+			'Lay out puff pastry sheets',
+			'Sprinkle cheese evenly over pastry',
+			'Roll up the pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on a lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p22',
+		[ 'c3' ],
+		'Honey Almond Pastry',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/honey_almond_pastry.png',
+		['Puff pastry sheets', 'Almonds', 'Honey', 'Butter', 'Egg wash (optional)']
+		[
+			'Preheat oven to specified temperature',
+			'In a bowl, mix almonds with honey',
+			'Melt butter and brush over the puff pastry',
+			'Spread the almond-honey mixture evenly over the pastry',
+			'Roll up the pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on a lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p23',
+		[ 'c3' ],
+		'Black Currant Pastry',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/black_currant.png',
+		['Puff pastry sheets', 'Black currants', 'Sugar', 'Butter', 'Egg wash (optional)' ],
+		[
+			'Preheat oven to specified temperature',
+			'In a bowl, mix black currants with sugar',
+			'Melt butter and brush over the puff pastry',
+			'Spread the black currant mixture evenly over the pastry',
+			'Roll up the pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on a lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p24',
+		[ 'c3' ],
+		'Choclate Cheese Pastry',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/chocolate_cheese-1.png',
+		[ 'Puff pastry sheets', 'Chocolate chips', 'Cream cheese', 'Sugar', 'Vanilla extract', 'Egg wash (optional)'],
+		[
+			'Preheat oven to specified temperature',
+			'In a bowl, mix cream cheese with sugar and vanilla extract until smooth',
+			'Sprinkle chocolate chips evenly over the puff pastry',
+			'Spread the cream cheese mixture over the chocolate chips',
+			'Roll up the pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on a lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p25',
+		[ 'c3' ],
+		'Oreo Pastry',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/orea_pastry_1.png',
+		['Puff pastry sheets', 'Oreo cookies', 'Butter', 'Brown sugar', 'Egg wash (optional)'],
+		[
+			'Preheat oven to specified temperature',
+			'Crush Oreo cookies into fine crumbs',
+			'Melt butter and mix with brown sugar',
+			'Spread the butter-sugar mixture evenly over the puff pastry',
+			'Sprinkle crushed Oreo cookies over the butter-sugar mixture',
+			'Roll up the pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on a lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
+		'p26',
+		[ 'c3' ],
+		'Vanilla Mocca Bar Pastry',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/mocca_bar_pastry.png',
+		['Puff pastry sheets', 'Instant coffee powder', 'Vanilla extract', 'Butter', 'Brown sugar', 'Egg wash (optional)'],
+		[
+			'Preheat oven to specified temperature',
+			'Dissolve instant coffee powder in hot water',
+			'Mix vanilla extract with melted butter',
+			'Spread the vanilla-coffee mixture evenly over the puff pastry',
+			'Sprinkle brown sugar over the mixture',
+			'Roll up the pastry tightly into a log',
+			'Cut the log into slices',
+			'Place slices on a lined baking sheet',
+			'Optional: Brush with egg wash for shine',
+			'Bake until golden brown and puffed',
+			'Cool before serving'
+		]
+	),
+
+	new Meal(
 		'sa1',
 		[ 'c4' ],
 		'Chicken Tikka Sandwich',
