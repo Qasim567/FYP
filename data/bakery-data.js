@@ -1957,6 +1957,317 @@ export const MEALS = [
 	),
 
 	new Meal(
+		'sa7',
+		[ 'c4' ],
+		'BBQ Chicken Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/BBQ-Chicken.jpg',
+		[ 'Chicken breast', 'Barbecue sauce', 'Burger buns', 'Lettuce', 'Tomato', 'Red onion', 'Mayonnaise', 'Salt', 'Pepper', 'Olive oil'],
+		[
+			'Season chicken breast with salt and pepper',
+			'Heat olive oil in a skillet over medium heat',
+			'Cook chicken breast until fully cooked and slightly charred, about 6-8 minutes per side',
+			'Remove chicken from skillet and let it rest for a few minutes',
+			'Slice burger buns in half and toast them lightly',
+			'Spread mayonnaise on the bottom half of each bun',
+			'Layer lettuce, tomato slices, and red onion slices on the bottom half of the buns',
+			'Place cooked chicken breast on top',
+			'Drizzle barbecue sauce over the chicken',
+			'Cover with the top half of the buns',
+			'Serve immediately and enjoy your BBQ chicken sandwich'
+		]
+	),
+
+	new Meal(
+		'sa8',
+		[ 'c4' ],
+		'Chicken Fajita Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/Fajita.jpg',
+		[ 'Chicken breast', 'Fajita seasoning', 'Bell peppers', 'Onion', 'Olive oil', 'Lime juice', 'Salt', 'Pepper', 'Tortilla wraps', 'Sour cream', 'Guacamole', 'Salsa'],
+		[
+			'Marinate chicken breast with fajita seasoning, lime juice, salt, and pepper',
+			'Heat olive oil in a skillet over medium-high heat',
+			'Cook chicken breast until fully cooked and slightly charred, about 6-8 minutes per side',
+			'Remove chicken from skillet and let it rest for a few minutes',
+			'In the same skillet, sauté sliced bell peppers and onions until tender',
+			'Slice cooked chicken breast into strips',
+			'Warm tortilla wraps in the skillet or microwave',
+			'Spread sour cream and guacamole on each tortilla',
+			'Place chicken strips and sautéed bell peppers and onions on top',
+			'Drizzle with salsa',
+			'Fold tortilla wraps and serve immediately. Enjoy your chicken fajita sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa9',
+		[ 'c4' ],
+		'Chicken Tandoori Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/Tandoori.jpg',
+		['Chicken breast', 'Tandoori masala', 'Yogurt', 'Lemon juice', 'Garlic paste', 'Ginger paste', 'Salt', 'Pepper', 'Naan bread or sandwich bread', 'Lettuce', 'Tomato', 'Red onion', 'Mint chutney or yogurt sauce'],
+		[
+			'Marinate chicken breast with tandoori masala, yogurt, lemon juice, garlic paste, ginger paste, salt, and pepper.',
+			'Refrigerate chicken and let it marinate for at least 1 hour or overnight',
+			'Preheat grill or grill pan over medium-high heat',
+			'Grill chicken breast until fully cooked and slightly charred, about 6-8 minutes per side',
+			'Remove chicken from grill and let it rest for a few minutes',
+			'Slice chicken breast into thin strips',
+			'Warm naan bread or sandwich bread',
+			'Spread mint chutney or yogurt sauce on one side of the bread',
+			'Layer lettuce, tomato slices, red onion slices, and grilled chicken strips on top',
+			'Cover with another piece of bread to form a sandwich',
+			'Slice in half and serve immediately. Enjoy your chicken tandoori sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa10',
+		[ 'c4' ],
+		'Italian B.M.T Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/menu-category-sandwich-italianBMT_B.jpg',
+		['Italian bread', 'Bacon', 'Salami', 'Pepperoni', 'Ham', 'Provolone cheese', 'Lettuce', 'Tomato', 'Red onion', 'Banana peppers', 'Black olives', 'Oil and vinegar dressing', 'Salt', 'Pepper'],
+		[
+			'Preheat oven to specified temperature',
+			'Slice Italian bread in half lengthwise',
+			'Layer bacon, salami, pepperoni, and ham on the bottom half of the bread',
+			'Add provolone cheese on top of the meat',
+			'Place the sandwich in the oven and bake until cheese is melted and bread is toasted',
+			'Remove from oven and let it cool slightly',
+			'Top with lettuce, tomato slices, red onion slices, banana peppers, and black olives',
+			'Drizzle with oil and vinegar dressing',
+			'Sprinkle with salt and pepper to taste',
+			'Cover with the other half of the bread',
+			'Slice and serve immediately. Enjoy your Italian B.M.T sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa11',
+		[ 'c4' ],
+		'Oven Roasted Chicken Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/menu-category-sandwich-ovnrstdchicken.jpg',
+		[ 'Chicken breast', 'Olive oil', 'Salt', 'Pepper', 'Garlic powder', 'Onion powder', 'Lettuce', 'Tomato', 'Avocado', 'Mayonnaise', 'Mustard', 'Sandwich bread'],
+		[
+			'Preheat oven to specified temperature',
+			'Place chicken breast on a baking sheet',
+			'Drizzle with olive oil',
+			'Season with salt, pepper, garlic powder, and onion powder',
+			'Bake in the preheated oven until fully cooked, about 20-25 minutes',
+			'Remove from oven and let it cool slightly',
+			'Slice chicken breast into thin strips',
+			'To assemble the sandwich, spread mayonnaise and mustard on one slice of bread',
+			'Layer lettuce, tomato slices, avocado slices, and roasted chicken strips on top',
+			'Cover with another slice of bread',
+			'Slice and serve immediately. Enjoy your oven roasted chicken sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa12',
+		[ 'c4' ],
+		'Peri Chicken Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/Peri-Peri.jpg',
+		[ 'Chicken breast', 'Peri-peri sauce', 'Olive oil', 'Lemon juice', 'Salt', 'Pepper', 'Lettuce', 'Tomato', 'Red onion', 'Mayonnaise', 'Sandwich buns'],
+		[
+			'Marinate chicken breast in peri-peri sauce, olive oil, lemon juice, salt, and pepper for at least 30 minutes',
+			'Preheat grill or grill pan over medium-high heat',
+			'Grill chicken breast until fully cooked, about 6-8 minutes per side',
+			'Remove chicken from grill and let it rest for a few minutes',
+			'Slice chicken breast into thin strips',
+			'Slice sandwich buns in half and lightly toast them',
+			'Spread mayonnaise on the bottom half of each bun',
+			'Layer lettuce, tomato slices, red onion slices, and grilled peri chicken strips on top',
+			'Cover with the top half of the buns',
+			'Slice in half and serve immediately. Enjoy your peri chicken sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa13',
+		[ 'c4' ],
+		'Roast Beef Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/menu-category-sandwich-roastbeef_B.jpg',
+		['Roast beef slices', 'Swiss cheese slices', 'Ciabatta bread', 'Horseradish sauce', 'Lettuce', 'Tomato', 'Red onion', 'Salt', 'Pepper', 'Olive oil', 'Mayonnaise'],
+		[
+			'Preheat oven to specified temperature',
+			'Slice ciabatta bread horizontally',
+			'Spread horseradish sauce and mayonnaise on the bottom half of the bread',
+			'Layer roast beef slices and Swiss cheese slices on the bottom half of the bread',
+			'Top with lettuce, tomato slices, and red onion slices',
+			'Sprinkle with salt and pepper, and drizzle with olive oil',
+			'Cover with the top half of the bread',
+			'Wrap the sandwich tightly in foil and place it in the preheated oven for 10-15 minutes, until the cheese is melted and the bread is warmed through',
+			'Remove from the oven, unwrap, slice, and serve immediately. Enjoy your roast beef sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa14',
+		[ 'c4' ],
+		'Steak & Chheese Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/menu-category-sandwich-steakandcheese_B.jpg',
+		[ 'Steak slices', 'Cheese slices', 'Baguette', 'Onion', 'Bell peppers', 'Mushrooms', 'Garlic', 'Salt', 'Pepper', 'Olive oil', 'Mayonnaise', 'Mustard'],
+		[
+			'Preheat a skillet over medium-high heat',
+			'Slice baguette horizontally and spread mayonnaise and mustard on one side of each slice',
+			'In the skillet, sauté sliced onion, bell peppers, mushrooms, and minced garlic until tender',
+			'Remove vegetables from skillet and set aside',
+			'In the same skillet, cook steak slices until desired doneness',
+			'Season steak with salt and pepper',
+			'Layer cheese slices on top of the steak slices and let them melt',
+			'To assemble the sandwich, place cooked steak and cheese on the bottom half of the baguette',
+			'Top with sautéed vegetables',
+			'Cover with the top half of the baguette',
+			'Slice and serve immediately. Enjoy your steak and cheese sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa15',
+		[ 'c4' ],
+		'Subway Club Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/menu-category-sandwich-subwayclub_B.jpg',
+		[ 'Turkey slices', 'Ham slices', 'Roast beef slices', 'Bacon strips', 'Swiss cheese slices', 'Lettuce', 'Tomato', 'Cucumber', 'Onion', 'Mayonnaise', 'Mustard', 'Subway sandwich bread'],
+		[
+			'Slice Subway sandwich bread horizontally',
+			'Spread mayonnaise and mustard on one side of each slice',
+			'Layer turkey slices, ham slices, roast beef slices, and bacon strips on the bottom half of the bread',
+			'Add Swiss cheese slices on top of the meat and bacon',
+			'Top with lettuce, tomato slices, cucumber slices, and onion slices',
+			'Cover with the top half of the bread',
+			'Slice and serve immediately. Enjoy your Subway Club sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa16',
+		[ 'c4' ],
+		'Sweet Onion Chicken Teriyaki Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/menu-category-sandwich-SWOCT_B.jpg',
+		[ 'Chicken breast', 'Teriyaki sauce', 'Sweet onion', 'Lettuce', 'Tomato', 'Mayonnaise', 'Honey mustard', 'Cheese slices', 'Sandwich buns'],
+		[
+			'Marinate chicken breast in teriyaki sauce for at least 30 minutes',
+			'Preheat grill or grill pan over medium-high heat',
+			'Grill chicken breast until fully cooked, about 6-8 minutes per side',
+			'While chicken is grilling, slice sweet onion thinly and sauté until caramelized',
+			'Slice sandwich buns in half and lightly toast them',
+			'Spread mayonnaise and honey mustard on the bottom half of each bun',
+			'Layer grilled chicken breast on the bottom half of the buns',
+			'Top with caramelized sweet onion slices, lettuce, tomato slices, and cheese slices',
+			'Cover with the top half of the buns',
+			'Slice and serve immediately. Enjoy your Sweet Onion Chicken Teriyaki Sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa17',
+		[ 'c4' ],
+		'Turkey Thigh Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/menu-category-sandwich-ham_B.jpg',
+		[ 'Turkey thigh', 'Salt', 'Black pepper', 'Olive oil', 'Lettuce', 'Tomato', 'Red onion', 'Mayonnaise', 'Mustard', 'Sandwich bread'],
+		[
+			'Preheat oven to specified temperature',
+			'Season turkey thigh with salt and black pepper',
+			'Heat olive oil in a skillet over medium-high heat',
+			'Sear turkey thigh on both sides until golden brown',
+			'Transfer the turkey thigh to a baking dish and bake in the preheated oven until fully cooked, about 20-25 minutes',
+			'Remove from oven and let it rest for a few minutes before slicing',
+			'Slice sandwich bread and toast lightly if desired',
+			'Spread mayonnaise and mustard on one side of each slice of bread',
+			'Layer lettuce, tomato slices, red onion slices, and sliced turkey thigh on top of one slice of bread',
+			'Cover with the other slice of bread to form a sandwich',
+			'Slice and serve immediately. Enjoy your Turkey Thigh Sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa18',
+		[ 'c4' ],
+		'Tuna Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/menu-category-sandwich-tuna.jpg',
+		['Canned tuna', 'Mayonnaise', 'Celery', 'Red onion', 'Lemon juice', 'Salt', 'Black pepper', 'Lettuce', 'Tomato', 'Sandwich bread'],
+		[
+			'Drain canned tuna and transfer it to a mixing bowl',
+			'Finely chop celery and red onion, then add to the tuna',
+			'Squeeze lemon juice over the tuna mixture',
+			'Season with salt and black pepper to taste',
+			'Add mayonnaise to the tuna mixture and mix well to combine',
+			'Slice sandwich bread and toast lightly if desired',
+			'Spread tuna mixture onto one slice of bread',
+			'Layer lettuce and tomato slices on top of the tuna mixture',
+			'Cover with the other slice of bread to form a sandwich',
+			'Slice and serve immediately. Enjoy your Tuna Sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa19',
+		[ 'c4' ],
+		'Turkey Beast Sandwich',
+		'affordable',
+		'simple',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/menu-category-sandwich-turkeybreast_B.jpg',
+		['Turkey breast', 'Salt', 'Black pepper', 'Olive oil', 'Lettuce', 'Tomato', 'Red onion', 'Mayonnaise', 'Mustard', 'Sandwich bread'],
+		[
+			'Preheat oven to specified temperature',
+			'Season turkey breast with salt and black pepper',
+			'Heat olive oil in a skillet over medium-high heat',
+			'Sear turkey breast on both sides until golden brown',
+			'Transfer the turkey breast to a baking dish and bake in the preheated oven until fully cooked, about 20-25 minutes',
+			'Remove from oven and let it rest for a few minutes before slicing',
+			'Slice sandwich bread and toast lightly if desired',
+			'Spread mayonnaise and mustard on one side of each slice of bread',
+			'Layer lettuce, tomato slices, red onion slices, and sliced turkey breast on top of one slice of bread',
+			'Cover with the other slice of bread to form a sandwich',
+			'Slice and serve immediately. Enjoy your Turkey Breast Sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa20',
+		[ 'c4' ],
+		'Veggie Delite Sandwich',
+		'affordable',
+		'simple',
+		'https://springs.com.pk/cdn/shop/products/plainsandwich.png?v=1667907775',
+		['Bread Slices','Butter','Deli Ham','Swiss Cheese','Lettuce','Mayonnaise','Mustard','Salt',
+		'Black Pepper'],
+		[
+			'Cut whole wheat bread into desired slices',
+			'Wash and slice lettuce, tomato, cucumber, green bell pepper, and red onion',
+			'Slice black olives',
+			'Arrange lettuce, tomato, cucumber, green bell pepper, red onion, and black olives on one slice of bread',
+			'Season with salt and pepper',
+			'Drizzle with olive oil and vinegar',
+			'Cover with another slice of bread',
+			'Slice and serve immediately. Enjoy your Veggie Delite Sandwich!'
+		]
+	),
+
+	new Meal(
 		'd1',
 		[ 'c5' ],
 		'Blueberry Donut',
