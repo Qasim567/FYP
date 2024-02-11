@@ -2252,7 +2252,7 @@ export const MEALS = [
 		'Veggie Delite Sandwich',
 		'affordable',
 		'simple',
-		'https://springs.com.pk/cdn/shop/products/plainsandwich.png?v=1667907775',
+		'https://www.subway.com/ns/images/menu/PAK/ENG/menu-category-sandwich-veggiedelite.jpg',
 		['Bread Slices','Butter','Deli Ham','Swiss Cheese','Lettuce','Mayonnaise','Mustard','Salt',
 		'Black Pepper'],
 		[
