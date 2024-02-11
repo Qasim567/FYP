@@ -2268,6 +2268,104 @@ export const MEALS = [
 	),
 
 	new Meal(
+		'sa21',
+		[ 'c4' ],
+		'Ham Sandwich',
+		'affordable',
+		'simple',
+		'https://www.lacademie.com/wp-content/uploads/2022/03/ham-sandwich.webp',
+		[ 'Sliced ham', 'Swiss cheese', 'Whole wheat bread', 'Lettuce', 'Tomato', 'Mayonnaise', 'Mustard', 'Salt', 'Pepper'],
+		[
+			'Place sliced ham and Swiss cheese on one slice of whole wheat bread',
+			'Add lettuce and tomato slices on top',
+			'Spread mayonnaise and mustard on the other slice of bread',
+			'Season with salt and pepper',
+			'Cover with the other slice of bread to form a sandwich',
+			'Slice and serve immediately. Enjoy your Ham Sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa22',
+		[ 'c4' ],
+		'Melt Sandwich',
+		'affordable',
+		'simple',
+		'https://www.lacademie.com/wp-content/uploads/2022/03/melt-sandwich.webp',
+		[ 'Sliced bread', 'Cheddar cheese', 'Mozzarella cheese', 'Butter', 'Garlic powder', 'Salt', 'Pepper'],
+		[
+			'Butter one side of each bread slice',
+			'Place cheddar and mozzarella cheese slices on the non-buttered side of one bread slice',
+			'Sprinkle garlic powder, salt, and pepper over the cheese',
+			'Cover with the other bread slice, buttered side facing out',
+			'Heat a skillet over medium heat',
+			'Place the sandwich in the skillet and cook until the bread is golden brown and the cheese is melted, flipping once',
+			'Remove from skillet, slice, and serve hot. Enjoy your Melt sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa23',
+		[ 'c4' ],
+		'Meatball Sandwich',
+		'affordable',
+		'simple',
+		'https://www.lacademie.com/wp-content/uploads/2022/03/meatball-sandwich.webp',
+		['Meatballs', 'Sub rolls', 'Marinara sauce', 'Mozzarella cheese', 'Parmesan cheese', 'Olive oil', 'Garlic', 'Salt', 'Pepper', 'Italian seasoning'],
+		[
+			'Preheat oven to specified temperature',
+			'In a skillet, heat olive oil over medium heat and sauté minced garlic until fragrant',
+			'Add meatballs to the skillet and cook until browned on all sides',
+			'Pour marinara sauce over the meatballs and simmer for a few minutes',
+			'Split sub rolls and place them on a baking sheet',
+			'Place meatballs on one side of each roll and spoon some marinara sauce over them',
+			'Sprinkle mozzarella and Parmesan cheese over the meatballs',
+			'Sprinkle with salt, pepper, and Italian seasoning',
+			'Cover with the other side of the rolls',
+			'Bake in the preheated oven until the cheese is melted and bubbly',
+			'Remove from oven, slice if desired, and serve hot. Enjoy your Meatball Sandwich!'
+		]
+	),
+
+	new Meal(
+		'sa24',
+		[ 'c4' ],
+		'Tea Sandwich',
+		'affordable',
+		'simple',
+		'https://www.lacademie.com/wp-content/uploads/2022/03/tea-sandwich.webp',
+		['Sliced bread', 'Cucumber', 'Cream cheese', 'Fresh dill', 'Salt', 'Black pepper'],
+		[
+			'Slice cucumber thinly',
+			'In a bowl, mix cream cheese with chopped fresh dill, salt, and black pepper',
+			'Spread the cream cheese mixture evenly onto one side of each bread slice',
+			'Arrange cucumber slices evenly on half of the bread slices',
+			'Cover with the remaining bread slices to form sandwiches',
+			'Cut off the crusts from each sandwich, if desired',
+			'Cut each sandwich into desired shapes, such as triangles or squares',
+			'Serve immediately and enjoy your Tea Sandwiches!'
+		]
+	),
+
+	new Meal(
+		'sa25',
+		[ 'c4' ],
+		'Bologna Sandwich',
+		'affordable',
+		'simple',
+		'https://www.lacademie.com/wp-content/uploads/2022/03/bologna-sandwich.webp',
+		[ 'Sliced bologna', 'Sliced bread', 'Lettuce', 'Tomato', 'Mayonnaise', 'Mustard', 'Salt', 'Pepper'],
+		[
+			'Place bologna slices on one slice of bread',
+			'Add lettuce and tomato slices on top',
+			'Spread mayonnaise and mustard on the other slice of bread',
+			'Season with salt and pepper',
+			'Cover with the other slice of bread to form a sandwich',
+			'Slice and serve immediately. Enjoy your Bologna Sandwich!'
+		]
+	),
+
+	new Meal(
 		'd1',
 		[ 'c5' ],
 		'Blueberry Donut',
