@@ -2669,6 +2669,242 @@ export const MEALS = [
 	),
 
 	new Meal(
+		'b10',
+		[ 'c6' ],
+		'Butter Bread',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/Butter-bread.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	new Meal(
+		'b11',
+		[ 'c6' ],
+		'Milky Bread',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/Milky-bread-1.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	new Meal(
+		'b12',
+		[ 'c6' ],
+		'Housy Bread',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/House-bread.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	new Meal(
+		'b13',
+		[ 'c6' ],
+		'Fruit Bread',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/fruit_bread.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	new Meal(
+		'b14',
+		[ 'c6' ],
+		'Whole Wheat Grain Bread',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/whole_wheat_grain.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	new Meal(
+		'b15',
+		[ 'c6' ],
+		'Flat Bun',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/04/flat_bun.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	new Meal(
+		'b16',
+		[ 'c6' ],
+		'Dinner Roll',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/dinner_roll_round.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	new Meal(
+		'b17',
+		[ 'c6' ],
+		'Fruit Bun',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/fruit_bun.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	new Meal(
+		'b18',
+		[ 'c6' ],
+		'Butter Bun',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/04/simple_bun.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	new Meal(
+		'b19',
+		[ 'c6' ],
+		'Garlic Bread',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/garlic_bread.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	new Meal(
+		'b20',
+		[ 'c6' ],
+		'Flat Rusk',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/flat_rusk-1.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	new Meal(
+		'b21',
+		[ 'c6' ],
+		'Round Rusk',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/round_rusk.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	new Meal(
+		'b22',
+		[ 'c6' ],
+		'Brown Rusk',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/brawn_rusk.png',
+		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[
+			'Mix flour, warm milk, ghee, sugar, yeast',
+			'Add saffron-infused milk, salt',
+			'Knead into a soft dough',
+			'Shape into flat rounds',
+			'Bake until golden',
+			'Brush with ghee'
+		]
+	),
+
+	
+
+	new Meal(
 		's1',
 		[ 'c7' ],
 		'Almond Baklava',
