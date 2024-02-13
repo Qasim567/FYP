@@ -2675,14 +2675,10 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.tehzeeb.com/wp-content/uploads/2020/06/Butter-bread.png',
-		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[ 'Sliced bread', 'Butter'],
 		[
-			'Mix flour, warm milk, ghee, sugar, yeast',
-			'Add saffron-infused milk, salt',
-			'Knead into a soft dough',
-			'Shape into flat rounds',
-			'Bake until golden',
-			'Brush with ghee'
+			'Spread butter evenly on one side of each bread slice',
+			'Use as desired in your recipes. Enjoy your buttered bread!'
 		]
 	),
 
@@ -2693,14 +2689,10 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.tehzeeb.com/wp-content/uploads/2020/06/Milky-bread-1.png',
-		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		['Sliced bread', 'Milk'],
 		[
-			'Mix flour, warm milk, ghee, sugar, yeast',
-			'Add saffron-infused milk, salt',
-			'Knead into a soft dough',
-			'Shape into flat rounds',
-			'Bake until golden',
-			'Brush with ghee'
+			'Pour milk over each slice of bread, allowing it to soak for a few seconds',
+			'Use as desired in your recipes. Enjoy your milky bread!'
 		]
 	),
 
@@ -2729,14 +2721,14 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.tehzeeb.com/wp-content/uploads/2020/06/fruit_bread.png',
-		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[ 'Sliced bread', 'Assorted fruits (such as bananas, strawberries, blueberries)', 'Honey or maple syrup', 'Cinnamon (optional)'],
 		[
-			'Mix flour, warm milk, ghee, sugar, yeast',
-			'Add saffron-infused milk, salt',
-			'Knead into a soft dough',
-			'Shape into flat rounds',
-			'Bake until golden',
-			'Brush with ghee'
+			'Place sliced bread on a plate or cutting board',
+			'Layer assorted fruits on top of the bread slices',
+			'Drizzle honey or maple syrup over the fruits for sweetness',
+			'Sprinkle cinnamon on top for added flavor, if desired',
+			'Cover with another slice of bread to form a sandwich, if desired',
+			'Slice and serve immediately. Enjoy your Fruit Bread!'
 		]
 	),
 
@@ -2747,14 +2739,17 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.tehzeeb.com/wp-content/uploads/2020/06/whole_wheat_grain.png',
-		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[ 'Whole wheat flour', 'Water', 'Honey or maple syrup', 'Yeast', 'Salt', 'Olive oil', 'Assorted grains (such as oats, flaxseeds, sunflower seeds, etc.)'],
 		[
-			'Mix flour, warm milk, ghee, sugar, yeast',
-			'Add saffron-infused milk, salt',
-			'Knead into a soft dough',
-			'Shape into flat rounds',
-			'Bake until golden',
-			'Brush with ghee'
+			'Mix whole wheat flour, water, honey or maple syrup, yeast, and salt in a large bowl to form a dough',
+			'Knead the dough for about 10 minutes until smooth and elastic',
+			'Cover the dough and let it rise in a warm place until doubled in size, about 1-2 hours',
+			'Punch down the dough and knead in assorted grains until well incorporated',
+			'Shape the dough into a loaf and place it in a greased loaf pan',
+			'Cover and let it rise again until doubled in size, about 30-60 minutes',
+			'Preheat oven to specified temperature',
+			'Bake the bread in the preheated oven until golden brown and sounds hollow when tapped on the bottom, about 30-40 minutes',
+			'Remove from oven and let it cool before slicing. Enjoy your Whole Wheat Grain Bread!'
 		]
 	),
 
@@ -2765,14 +2760,16 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.tehzeeb.com/wp-content/uploads/2020/04/flat_bun.png',
-		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		['All-purpose flour', 'Baking powder', 'Salt', 'Butter', 'Milk'],
 		[
-			'Mix flour, warm milk, ghee, sugar, yeast',
-			'Add saffron-infused milk, salt',
-			'Knead into a soft dough',
-			'Shape into flat rounds',
-			'Bake until golden',
-			'Brush with ghee'
+			'In a mixing bowl, combine all-purpose flour, baking powder, and salt',
+			'Cut in the butter until the mixture resembles coarse crumbs',
+			'Stir in milk gradually until a soft dough forms',
+			'On a floured surface, knead the dough gently for a few minutes',
+			'Divide the dough into equal-sized portions and shape each into a flat bun',
+			'Place the flat buns on a baking sheet lined with parchment paper',
+			'Bake in a preheated oven at the specified temperature until golden brown, about 10-15 minutes',
+			'Remove from oven and let them cool slightly before serving. Enjoy your Flat Buns!'
 		]
 	),
 
@@ -2783,14 +2780,20 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.tehzeeb.com/wp-content/uploads/2020/06/dinner_roll_round.png',
-		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		['All-purpose flour', 'Active dry yeast', 'Warm water', 'Sugar', 'Salt', 'Egg', 'Butter', 'Milk'],
 		[
-			'Mix flour, warm milk, ghee, sugar, yeast',
-			'Add saffron-infused milk, salt',
-			'Knead into a soft dough',
-			'Shape into flat rounds',
-			'Bake until golden',
-			'Brush with ghee'
+			'Dissolve yeast and sugar in warm water, let it sit for 5-10 minutes until frothy',
+			'In a mixing bowl, combine flour and salt',
+			'Make a well in the center of the flour mixture and add the yeast mixture, beaten egg, melted butter, and milk',
+			'Mix until a soft dough forms',
+			'Knead the dough on a floured surface for about 5-7 minutes until smooth and elastic',
+			'Place the dough in a greased bowl, cover, and let it rise in a warm place until doubled in size, about 1-2 hours',
+			'Punch down the dough and divide it into equal-sized portions',
+			'Shape each portion into a ball and place them on a greased baking sheet',
+			'Cover and let them rise again until doubled in size, about 30-45 minutes',
+			'Preheat oven to specified temperature',
+			'Bake the dinner rolls in the preheated oven until golden brown, about 15-20 minutes',
+			'Remove from oven and let them cool slightly before serving. Enjoy your Dinner Rolls!'
 		]
 	),
 
@@ -2801,14 +2804,16 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.tehzeeb.com/wp-content/uploads/2020/06/fruit_bun.png',
-		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		['All-purpose flour', 'Active dry yeast', 'Warm water', 'Sugar', 'Salt', 'Egg', 'Butter', 'Assorted dried fruits (such as raisins, cranberries, chopped apricots)', 'Cinnamon', 'Nutmeg (optional)'],
 		[
-			'Mix flour, warm milk, ghee, sugar, yeast',
-			'Add saffron-infused milk, salt',
-			'Knead into a soft dough',
-			'Shape into flat rounds',
-			'Bake until golden',
-			'Brush with ghee'
+			'Cream together butter and sugar until light and fluffy',
+			'Add eggs one at a time, mixing well after each addition',
+			'Sift together flour, baking powder, and salt in a separate bowl',
+			'Gradually add dry ingredients to the wet mixture, mixing until combined',
+			'Fold in chopped dried fruits and nuts, if using',
+			'Drop spoonfuls of dough onto a greased baking sheet',
+			'Bake in a preheated oven at specified temperature for 12-15 minutes, or until golden brown',
+			'Remove from oven and let cool on a wire rack before serving. Enjoy your Fruit Buns!'
 		]
 	),
 
@@ -2819,14 +2824,19 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.tehzeeb.com/wp-content/uploads/2020/04/simple_bun.png',
-		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		['Warm milk', 'Active dry yeast', 'Sugar', 'All-purpose flour', 'Salt', 'Butter (melted)'],
 		[
-			'Mix flour, warm milk, ghee, sugar, yeast',
-			'Add saffron-infused milk, salt',
-			'Knead into a soft dough',
-			'Shape into flat rounds',
-			'Bake until golden',
-			'Brush with ghee'
+			'Combine warm milk, yeast, and sugar in a bowl, let it sit for 5-10 minutes until frothy',
+			'In a large mixing bowl, combine flour and salt',
+			'Add the yeast mixture and melted butter to the flour mixture',
+			'Knead the dough until smooth and elastic, adding more flour if necessary',
+			'Cover the dough and let it rise in a warm place until doubled in size, about 1-2 hours',
+			'Punch down the dough and divide it into equal-sized portions',
+			'Shape each portion into a bun and place them on a greased baking sheet',
+			'Cover and let them rise again until doubled in size, about 30-45 minutes',
+			'Preheat oven to specified temperature',
+			'Bake the butter buns in the preheated oven until golden brown, about 15-20 minutes',
+			'Remove from oven and let them cool slightly before serving. Enjoy your Butter Buns!'
 		]
 	),
 
@@ -2837,14 +2847,15 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.tehzeeb.com/wp-content/uploads/2020/06/garlic_bread.png',
-		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[ 'French bread or Baguette', 'Butter', 'Garlic cloves (minced)', 'Fresh parsley (chopped)', 'Salt'],
 		[
-			'Mix flour, warm milk, ghee, sugar, yeast',
-			'Add saffron-infused milk, salt',
-			'Knead into a soft dough',
-			'Shape into flat rounds',
-			'Bake until golden',
-			'Brush with ghee'
+			'Preheat oven to specified temperature',
+			'Slice the French bread or baguette horizontally',
+			'Mix minced garlic, chopped parsley, and salt with softened butter in a bowl',
+			'Spread the garlic butter mixture evenly over the cut sides of the bread slices',
+			'Place the bread slices on a baking sheet, cut side up',
+			'Bake in the preheated oven until the edges are golden brown and the butter is melted and bubbly, about 10-15 minutes',
+			'Remove from oven and let cool slightly before serving. Enjoy your Garlic Bread!'
 		]
 	),
 
@@ -2855,14 +2866,16 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.tehzeeb.com/wp-content/uploads/2020/06/flat_rusk-1.png',
-		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		['Sliced bread', 'Butter or oil for brushing (optional)'],
 		[
-			'Mix flour, warm milk, ghee, sugar, yeast',
-			'Add saffron-infused milk, salt',
-			'Knead into a soft dough',
-			'Shape into flat rounds',
-			'Bake until golden',
-			'Brush with ghee'
+			'Preheat oven to specified temperature',
+			'Place sliced bread on a baking sheet in a single layer',
+			'Bake in the preheated oven for about 10-15 minutes, or until the bread slices are golden and crispy',
+			'Remove from oven and let them cool completely',
+			'Once cooled, cut the toasted bread slices into desired shapes, such as rectangles or squares',
+			'Optionally, brush each piece with melted butter or oil for added flavor',
+			'Return the pieces to the oven and bake for an additional 5-10 minutes, or until they are dry and crisp',
+			'Allow to cool completely before serving or storing. Enjoy your Flat Rusks!'
 		]
 	),
 
@@ -2873,14 +2886,16 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.tehzeeb.com/wp-content/uploads/2020/06/round_rusk.png',
-		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		[ 'Sliced bread', 'Butter or oil for brushing (optional)'],
 		[
-			'Mix flour, warm milk, ghee, sugar, yeast',
-			'Add saffron-infused milk, salt',
-			'Knead into a soft dough',
-			'Shape into flat rounds',
-			'Bake until golden',
-			'Brush with ghee'
+			'Preheat oven to specified temperature',
+			'Place sliced bread on a baking sheet in a single layer',
+			'Bake in the preheated oven for about 10-15 minutes, or until the bread slices are golden and crispy',
+			'Remove from oven and let them cool completely',
+			'Once cooled, use a round cookie cutter to cut the toasted bread slices into round shapes',
+			'Optionally, brush each piece with melted butter or oil for added flavor',
+			'Return the pieces to the oven and bake for an additional 5-10 minutes, or until they are dry and crisp',
+			'Allow to cool completely before serving or storing. Enjoy your Round Rusks!'
 		]
 	),
 
@@ -2891,18 +2906,18 @@ export const MEALS = [
 		'affordable',
 		'simple',
 		'https://www.tehzeeb.com/wp-content/uploads/2020/06/brawn_rusk.png',
-		['Bakery flour','Sugar','Instant yeast powser','Milk','Water','Egg','Liquid Oil','Salt','Saffron'],
+		['Whole wheat bread slices', 'Butter or oil for brushing (optional)'],
 		[
-			'Mix flour, warm milk, ghee, sugar, yeast',
-			'Add saffron-infused milk, salt',
-			'Knead into a soft dough',
-			'Shape into flat rounds',
-			'Bake until golden',
-			'Brush with ghee'
+			'Preheat oven to specified temperature',
+			'Place whole wheat bread slices on a baking sheet in a single layer',
+			'Bake in the preheated oven for about 10-15 minutes, or until the bread slices are golden and crispy',
+			'Remove from oven and let them cool completely',
+			'Once cooled, cut the toasted bread slices into desired shapes, such as rectangles or squares',
+			'Optionally, brush each piece with melted butter or oil for added flavor',
+			'Return the pieces to the oven and bake for an additional 5-10 minutes, or until they are dry and crisp',
+			'Allow to cool completely before serving or storing. Enjoy your Brown Rusks!'
 		]
 	),
-
-	
 
 	new Meal(
 		's1',
