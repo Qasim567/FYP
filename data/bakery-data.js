@@ -2506,6 +2506,185 @@ export const MEALS = [
 	),
 
 	new Meal(
+		'd8',
+		[ 'c5' ],
+		'Choclate Marble',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/chocolate_marble_donut.png',
+		[ 'All-purpose flour', 'Cocoa powder', 'Baking powder', 'Salt', 'Butter (melted)', 'Granulated sugar', 'Eggs', 'Vanilla extract', 'Milk', 'Powdered sugar (for glaze)', 'Milk (for glaze)', 'Chocolate chips (optional)'],
+		[
+			'Preheat oven to specified temperature and grease a donut pan',
+			'In a mixing bowl, whisk together flour, cocoa powder, baking powder, and salt',
+			'In another bowl, mix together melted butter and granulated sugar until well combined',
+			'Add eggs one at a time, mixing well after each addition',
+			'Stir in vanilla extract',
+			'Gradually add dry ingredients to wet mixture, alternating with milk, and mix until smooth',
+			'If desired, fold in chocolate chips',
+			'Spoon half of the batter into a separate bowl and mix in a little extra cocoa powder to create a darker chocolate batter',
+			'Alternate spooning dollops of each batter into the prepared donut pan',
+			'Use a toothpick or knife to gently swirl the batters together to create a marbled effect',
+			'Bake in the preheated oven for about 10-12 minutes, or until a toothpick inserted into the donuts comes out clean',
+			'Allow the donuts to cool in the pan for a few minutes before transferring them to a wire rack to cool completely',
+			'In a small bowl, whisk together powdered sugar and milk to make a glaze',
+			'Dip the cooled donuts into the glaze, then place them back on the wire rack to set',
+			'Enjoy your Chocolate Marble Donuts!'
+		]
+	),
+
+	new Meal(
+		'd9',
+		[ 'c5' ],
+		'Plain Donut',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/plain_donut.png',
+		['All-Purpose Flour','Sugar','Baking Powder','Milk','Eggs','Vanilla Extract',
+		'Butter','Powdered Sugar'
+		],
+		[
+			'Mix flour, sugar, baking powder',
+			'Add milk, eggs, vanilla, melted butter',
+			'Spoon into donut molds',
+			'Bake until golden and firm',
+			'Cool, roll in powdered sugar'
+		]
+	),
+
+	new Meal(
+		'd10',
+		[ 'c5' ],
+		'Oreo Donut',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/oreo_donut-1.png',
+		['All-Purpose Flour','Sugar','Baking Powder','Milk','Eggs','Vanilla Extract',
+		'Butter','Powdered Sugar'
+		],
+		[
+			'Mix flour, sugar, baking powder',
+			'Add milk, eggs, vanilla, melted butter',
+			'Spoon into donut molds',
+			'Bake until golden and firm',
+			'Cool, roll in powdered sugar'
+		]
+	),
+
+	new Meal(
+		'd11',
+		[ 'c5' ],
+		'Walnut Donut',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/WALNUT-DONUT-1-1-1.png',
+		['All-Purpose Flour','Sugar','Baking Powder','Milk','Eggs','Vanilla Extract',
+		'Butter','Powdered Sugar'
+		],
+		[
+			'Mix flour, sugar, baking powder',
+			'Add milk, eggs, vanilla, melted butter',
+			'Spoon into donut molds',
+			'Bake until golden and firm',
+			'Cool, roll in powdered sugar'
+		]
+	),
+
+	new Meal(
+		'd12',
+		[ 'c5' ],
+		'Choclate Filled Donut',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/CHOCOLATE-FILLED-DONUT-1.png',
+		['All-Purpose Flour','Sugar','Baking Powder','Milk','Eggs','Vanilla Extract',
+		'Butter','Powdered Sugar'
+		],
+		[
+			'Mix flour, sugar, baking powder',
+			'Add milk, eggs, vanilla, melted butter',
+			'Spoon into donut molds',
+			'Bake until golden and firm',
+			'Cool, roll in powdered sugar'
+		]
+	),
+
+	new Meal(
+		'd13',
+		[ 'c5' ],
+		'Fudge Fill Donut',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/FUDGE-FILLED-DONUT-1.png',
+		['All-Purpose Flour','Sugar','Baking Powder','Milk','Eggs','Vanilla Extract',
+		'Butter','Powdered Sugar'
+		],
+		[
+			'Mix flour, sugar, baking powder',
+			'Add milk, eggs, vanilla, melted butter',
+			'Spoon into donut molds',
+			'Bake until golden and firm',
+			'Cool, roll in powdered sugar'
+		]
+	),
+
+	new Meal(
+		'd14',
+		[ 'c5' ],
+		'Sugar Icing Donut',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/Sugar-icing-1-1.png',
+		['All-Purpose Flour','Sugar','Baking Powder','Milk','Eggs','Vanilla Extract',
+		'Butter','Powdered Sugar'
+		],
+		[
+			'Mix flour, sugar, baking powder',
+			'Add milk, eggs, vanilla, melted butter',
+			'Spoon into donut molds',
+			'Bake until golden and firm',
+			'Cool, roll in powdered sugar'
+		]
+	),
+
+	new Meal(
+		'd15',
+		[ 'c5' ],
+		'Hazelnut Donut',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/chocolaty_donut_one.png',
+		['All-Purpose Flour','Sugar','Baking Powder','Milk','Eggs','Vanilla Extract',
+		'Butter','Powdered Sugar'
+		],
+		[
+			'Mix flour, sugar, baking powder',
+			'Add milk, eggs, vanilla, melted butter',
+			'Spoon into donut molds',
+			'Bake until golden and firm',
+			'Cool, roll in powdered sugar'
+		]
+	),
+
+	new Meal(
+		'd16',
+		[ 'c5' ],
+		'Choclate Fudge Donut',
+		'affordable',
+		'simple',
+		'https://www.tehzeeb.com/wp-content/uploads/2020/06/chocolaty_donut_two-1.png',
+		['All-Purpose Flour','Sugar','Baking Powder','Milk','Eggs','Vanilla Extract',
+		'Butter','Powdered Sugar'
+		],
+		[
+			'Mix flour, sugar, baking powder',
+			'Add milk, eggs, vanilla, melted butter',
+			'Spoon into donut molds',
+			'Bake until golden and firm',
+			'Cool, roll in powdered sugar'
+		]
+	),
+
+	new Meal(
 		'b1',
 		[ 'c6' ],
 		'Brown Bread',
