@@ -59,6 +59,7 @@ headertxt:{
   fontSize:20,
   fontWeight:'bold',
   textAlignVertical: 'center',
+  backgroundColor: '#3f2f25',
   fontStyle:'italic',
   textAlign:'center'
 },

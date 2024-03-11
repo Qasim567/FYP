@@ -8,18 +8,27 @@ function SearchScreen() {
   const [predictionResult, setPredictionResult] = useState(null);
   const [error, setError] = useState(null);
 
-  const handlePressButtonAsync = async () => {
+  const handlePressButtonAsync = async (isCamera) => {
     try {
-      let result = await ImagePicker.launchImageLibraryAsync({
-        mediaTypes: ImagePicker.MediaTypeOptions.Images,
-        allowsEditing: false,
-        aspect: [4, 3],
-        quality: 1,
-      });
+      let result;
+      if (isCamera) {
+        result = await ImagePicker.launchCameraAsync({
+          mediaTypes: ImagePicker.MediaTypeOptions.Images,
+          allowsEditing: false,
+          aspect: [4, 3],
+          quality: 1,
+        });
+      } else {
+        result = await ImagePicker.launchImageLibraryAsync({
+          mediaTypes: ImagePicker.MediaTypeOptions.Images,
+          allowsEditing: false,
+          aspect: [4, 3],
+          quality: 1,
+        });
+      }
 
-      if (!result.canceled) {
+      if (!result.cancelled) {
         const selectedAsset = result.assets[0];
-
         setImageUri(selectedAsset.uri);
         const imageType = selectedAsset.mediaType;
 
@@ -32,7 +41,7 @@ function SearchScreen() {
 
         try {
           console.log('Sending Axios request...');
-          let response = await axios.post('http://192.168.0.105:5000/predict', formData, {
+          let response = await axios.post('http://192.168.1.4:5000/predict', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
@@ -44,8 +53,8 @@ function SearchScreen() {
           setError('Error during image prediction. Please try again.');
         }
       }
-    } catch (imagePickerError) {
-      console.error('Error during image selection:', imagePickerError);
+    } catch (error) {
+      console.error('Error during image selection:', error);
       setError('Error during image selection. Please try again.');
     }
   };
@@ -58,14 +67,18 @@ function SearchScreen() {
           <Text style={styles.resultText}>Prediction Result:</Text>
           {Object.entries(predictionResult).map(([className, { count, confidence }], index) => (
             <View key={index}>
-              <Text style={styles.resultText}>{`${count} ${className}`}</Text>
+              <Text style={styles.resultText}>Class Name: {className}</Text>
+              <Text style={styles.resultText}>{`Count: ${count}`}</Text>
               <Text style={styles.resultText}>{`Confidence: ${confidence}`}</Text>
             </View>
           ))}
         </View>
       )}
       {error && <Text style={styles.errorText}>{error}</Text>}
-      <Button title="Select Image" onPress={handlePressButtonAsync} />
+      <View style={styles.buttonContainer}>
+        <Button title="Select Image" onPress={() => handlePressButtonAsync(false)} />
+        <Button title="Capture Image" onPress={() => handlePressButtonAsync(true)} />
+      </View>
     </View>
   );
 }
@@ -95,6 +108,12 @@ const styles = StyleSheet.create({
     color: 'red',
     fontSize: 16,
     marginVertical: 10,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    width: '100%',
+    marginTop: 20,
   },
 });
 
