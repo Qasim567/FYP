@@ -17,6 +17,7 @@ import FavoriteScreen from "./screens/FavrouiteScreen"
 import ProfileScreen from './screens/ProfileScreen';
 import MealsScreen from './components/MealScreen';
 import MealDetailScreen from './components/MealDetailScreen';
+import CameraScreen from './screens/CameraScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -131,6 +132,13 @@ export default function App() {
               headerTintColor: 'white',
               contentStyle: { backgroundColor: '#3f2f25' },
             }} />
+            <Stack.Screen
+            name="Camera"
+              component={CameraScreen} 
+              options={{
+              headerShown: false,
+            }}
+            />
         </Stack.Navigator>
       </NavigationContainer>
       <StatusBar style='dark' />

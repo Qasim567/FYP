@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
 import { Button, Image, View, StyleSheet, Text } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
+import { useNavigation } from '@react-navigation/native'; 
+import CameraScreen from './CameraScreen';
 import axios from 'axios';
 
 function SearchScreen() {
+  const navigation = useNavigation();
   const [imageUri, setImageUri] = useState(null);
   const [predictionResult, setPredictionResult] = useState(null);
   const [error, setError] = useState(null);
 
   const handlePressButtonAsync = async (isCamera) => {
+
+  const handleOpenCamera = () => {
+    navigation.navigate('Camera');
+  };
     try {
       let result;
       if (isCamera) {
@@ -41,7 +48,9 @@ function SearchScreen() {
 
         try {
           console.log('Sending Axios request...');
+
           let response = await axios.post('http://192.168.1.4:5000/predict', formData, {
+
             headers: {
               'Content-Type': 'multipart/form-data',
             },
@@ -75,10 +84,10 @@ function SearchScreen() {
         </View>
       )}
       {error && <Text style={styles.errorText}>{error}</Text>}
+
       <View style={styles.buttonContainer}>
         <Button title="Select Image" onPress={() => handlePressButtonAsync(false)} />
         <Button title="Capture Image" onPress={() => handlePressButtonAsync(true)} />
-      </View>
     </View>
   );
 }
