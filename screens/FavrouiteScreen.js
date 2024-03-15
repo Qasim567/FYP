@@ -1,5 +1,5 @@
 import React, { useEffect, useCallback } from 'react';
-import { View, Text, FlatList, Image, StyleSheet, Pressable, Alert } from 'react-native';
+import { View, Text, FlatList, Image, StyleSheet, Pressable, Alert, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useFavorites } from '../context/FavoritesContext';
 
@@ -32,6 +32,11 @@ const FavoritesScreen = () => {
   };
 
   return (
+    <ImageBackground
+            style={styles.background}
+            source={require('../assets/cookie.jpg')}
+            resizeMode="cover"
+        >
     <View style={styles.container}>
       {favorites.length === 0 ? (
         <Text style={styles.noFavoritesText}>No Favorites</Text>
@@ -43,13 +48,16 @@ const FavoritesScreen = () => {
         />
       )}
     </View>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+  },
   container: {
     flex: 1,
-    backgroundColor: '#3f2f25',
     paddingTop: 50,
   },
   mealContainer: {
@@ -70,7 +78,7 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   noFavoritesText: {
-    color: 'white',
+    color: 'blue',
     fontSize: 20,
     textAlign: 'center',
     marginTop: '50%',

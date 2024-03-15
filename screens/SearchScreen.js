@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Image, View, StyleSheet, Text } from 'react-native';
+import { Button, Image, View, StyleSheet, Text, ImageBackground } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import axios from 'axios';
 
@@ -27,7 +27,7 @@ function SearchScreen() {
         });
       }
 
-      if (!result.cancelled) {
+      if (!result.canceled) {
         const selectedAsset = result.assets[0];
         setImageUri(selectedAsset.uri);
         const imageType = selectedAsset.mediaType;
@@ -60,6 +60,11 @@ function SearchScreen() {
   };
 
   return (
+    <ImageBackground
+            style={styles.background}
+            source={require('../assets/cookie.jpg')}
+            resizeMode="cover"
+        >
     <View style={styles.container}>
       {imageUri && <Image source={{ uri: imageUri }} style={styles.imagePreview} />}
       {predictionResult && (
@@ -80,10 +85,14 @@ function SearchScreen() {
         <Button title="Capture Image" onPress={() => handlePressButtonAsync(true)} />
       </View>
     </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     justifyContent: 'center',

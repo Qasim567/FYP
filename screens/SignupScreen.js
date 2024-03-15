@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { LinearGradient } from 'expo-linear-gradient';
-import { View, Text, StyleSheet, TextInput, Image, Pressable, Dimensions, ScrollView} from 'react-native';
+import { View, Text, StyleSheet, TextInput, Image, Pressable, Dimensions, ScrollView, ImageBackground} from 'react-native';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase/firebase.config';
 function SignupScreen({navigation}) {
@@ -41,7 +40,11 @@ function SignupScreen({navigation}) {
     }
 
     return (
-        <LinearGradient style={styles.container} colors={['#4e0329', '#ddb52f']}>
+        <ImageBackground
+            style={styles.background}
+            source={require('../assets/cookie.jpg')}
+            resizeMode="cover"
+        >
             <ScrollView style={styles.container}>
                 <View style={styles.firstView}>
                     <Text style={styles.headingText}>Sign up{'\n'}
@@ -91,11 +94,14 @@ function SignupScreen({navigation}) {
                     </View>
                 </View>
             </ScrollView>
-        </LinearGradient>
+        </ImageBackground>
     )
 }
 
 const styles = StyleSheet.create({
+    background: {
+        flex: 1,
+      },
     container: {
         flex: 1,
     },

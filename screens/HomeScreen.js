@@ -40,7 +40,7 @@ function HomeScreen() {
 const styles=StyleSheet.create({
   container: {
     flex: 1,
-   backgroundColor:'#3f2f25'
+  //  backgroundColor:'lightgray'
 },
   imageview: {
     flex:0.75,
@@ -59,7 +59,7 @@ headertxt:{
   fontSize:20,
   fontWeight:'bold',
   textAlignVertical: 'center',
-  backgroundColor: '#3f2f25',
+  // backgroundColor: '#3f2f25',
   fontStyle:'italic',
   textAlign:'center'
 },
