@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Image, View, StyleSheet, Text, ImageBackground } from 'react-native';
-import * as ImagePicker from 'expo-image-picker';
+import * as ImagePicker from 'expo-image-picker'; 
 import axios from 'axios';
 
 function SearchScreen() {
@@ -41,13 +41,31 @@ function SearchScreen() {
 
         try {
           console.log('Sending Axios request...');
-          let response = await axios.post('http://192.168.0.103:5000/predict', formData, {
+          let response1 = await axios.post('http://192.168.0.103:5000/predict_model1', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
           });
-          console.log('Axios Response:', response.data);
-          setPredictionResult(response.data);
+
+          let response2 = await axios.post('http://192.168.0.103:5000/predict_model2', formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+            },
+          });
+
+          let combinedPredictions = { ...response1.data };
+
+          for (const [className, prediction] of Object.entries(response2.data)) {
+            if (combinedPredictions[className]) {
+              if (prediction.confidence > combinedPredictions[className].confidence) {
+                combinedPredictions[className] = prediction;
+              }
+            } else {
+              combinedPredictions[className] = prediction;
+            }
+          }
+
+          setPredictionResult(combinedPredictions);
         } catch (axiosError) {
           console.error('Axios Error:', axiosError);
           setError('Error during image prediction. Please try again.');
@@ -61,30 +79,35 @@ function SearchScreen() {
 
   return (
     <ImageBackground
-            style={styles.background}
-            source={require('../assets/cookie.jpg')}
-            resizeMode="cover"
-        >
-    <View style={styles.container}>
-      {imageUri && <Image source={{ uri: imageUri }} style={styles.imagePreview} />}
-      {predictionResult && (
-        <View style={styles.resultContainer}>
-          <Text style={styles.resultText}>Prediction Result:</Text>
-          {Object.entries(predictionResult).map(([className, { count, confidence }], index) => (
-            <View key={index}>
-              <Text style={styles.resultText}>Class Name: {className}</Text>
-              <Text style={styles.resultText}>{`Count: ${count}`}</Text>
-              <Text style={styles.resultText}>{`Confidence: ${confidence}`}</Text>
-            </View>
-          ))}
+      style={styles.background}
+      source={require('../assets/cookie.jpg')}
+      resizeMode="cover"
+    >
+      <View style={styles.container}>
+        <Text style={styles.hetext}>Let's identify an {'\n'} item</Text>
+        {imageUri && <Image source={{ uri: imageUri }} style={styles.imagePreview} />}
+        {predictionResult && (
+          <View style={styles.resultContainer}>
+            {Object.entries(predictionResult).map(([className, { count, confidence }], index) => (
+              <View key={index}>
+                <Text style={styles.resultText}>Item: {className}</Text>
+                <Text style={styles.resultText}>{`Confidence: ${confidence}`}</Text>
+              </View>
+            ))}
+          </View>
+        )}
+        {error && <Text style={styles.errorText}>{error}</Text>}
+        <View style={styles.buttonContainer}>
+          <Button
+            title="Select Image"
+            onPress={() => handlePressButtonAsync(false)}
+          />
+          <Button
+            title="Capture Image"
+            onPress={() => handlePressButtonAsync(true)}
+          />
         </View>
-      )}
-      {error && <Text style={styles.errorText}>{error}</Text>}
-      <View style={styles.buttonContainer}>
-        <Button title="Select Image" onPress={() => handlePressButtonAsync(false)} />
-        <Button title="Capture Image" onPress={() => handlePressButtonAsync(true)} />
       </View>
-    </View>
     </ImageBackground>
   );
 }
@@ -112,6 +135,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginVertical: 5,
     textAlign: 'center',
+    fontWeight:'bold',
+    color:'white'
   },
   errorText: {
     color: 'red',
@@ -124,6 +149,12 @@ const styles = StyleSheet.create({
     width: '100%',
     marginTop: 20,
   },
+  hetext:{
+    fontSize:30,
+    textAlign:'center',
+    fontStyle:'italic',
+    fontWeight:'bold'
+  }
 });
 
 export default SearchScreen;

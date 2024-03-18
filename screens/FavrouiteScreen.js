@@ -39,7 +39,7 @@ const FavoritesScreen = () => {
         >
     <View style={styles.container}>
       {favorites.length === 0 ? (
-        <Text style={styles.noFavoritesText}>No Favorites</Text>
+        <Text style={styles.noFavoritesText}>Favorites yet to add!</Text>
       ) : (
         <FlatList
           data={favorites}
@@ -78,10 +78,12 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   noFavoritesText: {
-    color: 'blue',
-    fontSize: 20,
+    color: 'black',
+    fontSize: 30,
     textAlign: 'center',
-    marginTop: '50%',
+    marginTop: '75%',
+    fontStyle:'italic',
+    fontWeight:'bold'
   },
 });
 

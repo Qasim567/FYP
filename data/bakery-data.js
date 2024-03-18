@@ -116,7 +116,7 @@ export const MEALS = [
 		'Black Forest Cake',
 		'affordable',
 		'simple',
-		'https://www.shreemithai.com/cdn/shop/products/FShreemithai15-01-2021-407lowrescopy_2400x.jpg?v=1611572013',
+		'https://cakesandbakes.com/_next/image?url=https%3A%2F%2Fcdn.retailry.com%2Fcakesandbakes%2Fproducts%2FOriginal%2Fef9d2163-1366-433a-ab0a-63f6e7e3f944.jpg&w=1080&q=75',
 		['Chocolate Cake Layers','Cherries (pitted)','Sugar','Whipped Cream','Chocolate Shavings'],
 		[
 			'Bake chocolate cake layers',
@@ -324,7 +324,7 @@ export const MEALS = [
 		'Fruit Cake',
 		'affordable',
 		'simple',
-		'https://hips.hearstapps.com/hmg-prod/images/fruit-cake-recipe-1630084221.jpg?crop=0.675xw:1.00xh;0.137xw,0&resize=1200:*',
+		'https://bakewithshivesh.com/wp-content/uploads/2021/06/IMG_9642-scaled.jpg',
 		['Flour', 'Sugar', 'Eggs', 'Butter', 'Mixed fruit', 'Nuts', 'Baking powder', 'Cinnamon'],
 		[
 			'Preheat oven to desired temperature',
@@ -705,7 +705,7 @@ export const MEALS = [
 		'Tiramisu Coffee Cake',
 		'affordable',
 		'simple',
-		'https://cdn-hnipj.nitrocdn.com/bLLYVWTkuWVULSBJPlWIHEexFXNLNQET/assets/images/optimized/rev-d5234ed/meer.com.pk/wp-content/uploads/2023/11/untitled-55.pnghttps://meer.com.pk/wp-content/uploads/2023/11/untitled-122-scaled-1-585x780.jpg',
+		'https://www.alsothecrumbsplease.com/wp-content/uploads/2018/05/Tiramisu-Cake-25.jpg',
 		[ 'Flour', 'Sugar', 'Eggs', 'Butter', 'Coffee powder', 'Mascarpone cheese', 'Vanilla extract', 'Baking powder', 'Salt', 'Milk', 'Cocoa powder', 'Espresso', 'Rum (optional)'],
 		[
 			'Preheat oven', 
@@ -747,7 +747,7 @@ export const MEALS = [
 		'Akhrot Cookie',
 		'affordable',
 		'simple',
-		'https://www.chelsea.co.nz/files/cache/75b8c16310bced214f6ee2fb57f5f6a0_f2317.jpg.webp',
+		'https://www.allrecipes.com/thmb/sL0KELUmod9DBdKEhm64EOwxTtA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/106163-4e9e6dca1218495e9faf4ad2b1d09ecb.jpg',
 		['Walnuts','All-Purpose Flour','Butter','Sugar','Vanilla Extract'],
 		[
 			'Grind walnuts into a coarse powder',
@@ -980,7 +980,7 @@ export const MEALS = [
 		'Ginger Cookie',
 		'affordable',
 		'simple',
-		'https://mymorningmocha.com/wp-content/uploads/2022/11/Ginger-biscuit-recipe.jpg',
+		'https://www.allrecipes.com/thmb/fWmLhJ0w83byfd1CSQACr5DyHhY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/17165_Big-Soft-Ginger-Cookies_ZAKIAH_4574068_original-1x1-1-20f62d43d3374f3fb180362324ea23c3.jpg',
 		['Butter','Sugar','Egg','Flour','Baking Soda','Salt','Ground Ginger','Ground Cinnamon'],
 		[
 			'Cream butter, sugar',
@@ -1033,7 +1033,7 @@ export const MEALS = [
 		'Pista Cookie',
 		'affordable',
 		'simple',
-		'https://tastedrecipes.com/wp-content/uploads/2021/03/Kaju-Pista-Cookies-6.jpgg',
+		'https://j6e2i8c9.rocketcdn.me/wp-content/uploads/2016/06/Eggless-Pistachio-cookies-2.jpg',
 		['Butter','Sugar','Egg','Flour','Baking Powder','Salt','Pistachios (chopped)'],
 		[
 			'Cream butter, sugar',
@@ -2674,7 +2674,7 @@ export const MEALS = [
 		'Butter Bread',
 		'affordable',
 		'simple',
-		'https://www.tehzeeb.com/wp-content/uploads/2020/06/Butter-bread.png',
+		'https://pastrychefonline.com/wp-content/uploads/2015/01/bread-butter-sugar-sandwich.jpg',
 		[ 'Sliced bread', 'Butter'],
 		[
 			'Spread butter evenly on one side of each bread slice',
@@ -2688,7 +2688,7 @@ export const MEALS = [
 		'Milky Bread',
 		'affordable',
 		'simple',
-		'https://www.tehzeeb.com/wp-content/uploads/2020/06/Milky-bread-1.png',
+		'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpiWWjp_MjcP_YINPSVVx-ki4xrz38bwisHoQjddJhyw&s',
 		['Sliced bread', 'Milk'],
 		[
 			'Pour milk over each slice of bread, allowing it to soak for a few seconds',
@@ -2720,7 +2720,7 @@ export const MEALS = [
 		'Fruit Bread',
 		'affordable',
 		'simple',
-		'https://www.tehzeeb.com/wp-content/uploads/2020/06/fruit_bread.png',
+		'https://www.allrecipes.com/thmb/1fhGO9XBT_RfH8HH05a2thEL8hU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Candied_Fruitbread_4592-fd4d3d92cddd4b11a9633cd066236302.jpg',
 		[ 'Sliced bread', 'Assorted fruits (such as bananas, strawberries, blueberries)', 'Honey or maple syrup', 'Cinnamon (optional)'],
 		[
 			'Place sliced bread on a plate or cutting board',
@@ -2738,7 +2738,7 @@ export const MEALS = [
 		'Whole Wheat Grain Bread',
 		'affordable',
 		'simple',
-		'https://www.tehzeeb.com/wp-content/uploads/2020/06/whole_wheat_grain.png',
+		'https://www.fivehearthome.com/wp-content/uploads/2019/09/Best-Whole-Wheat-Bread-Recipe-by-Five-Heart-Home-14-500x375.jpg',
 		[ 'Whole wheat flour', 'Water', 'Honey or maple syrup', 'Yeast', 'Salt', 'Olive oil', 'Assorted grains (such as oats, flaxseeds, sunflower seeds, etc.)'],
 		[
 			'Mix whole wheat flour, water, honey or maple syrup, yeast, and salt in a large bowl to form a dough',
