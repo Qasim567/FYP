@@ -1,5 +1,5 @@
-import React, {useLayoutEffect} from 'react';
-import { View, Text, FlatList, Image, StyleSheet, Pressable } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, FlatList, Image, StyleSheet, Pressable, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const RenderItem = ({ item }) => {
@@ -21,13 +21,34 @@ const RenderItem = ({ item }) => {
 
 const MealsScreen = ({ route }) => {
   const { meals } = route.params;
+  const [searchText, setSearchText] = useState('');
+
+  // Convert the searchText to an array of ingredients
+  const searchedIngredients = searchText.toLowerCase().split(',');
+
+  const filteredMeals = meals.filter(meal =>
+    meal.ingredients && searchedIngredients.every(searchedIngredient =>
+      meal.ingredients.some(ingredient =>
+        ingredient.toLowerCase().includes(searchedIngredient.trim())
+      )
+    )
+  );
 
   return (
-    <FlatList
-      data={meals}
-      keyExtractor={(item) => item.id}
-      renderItem={({ item }) => <RenderItem item={item} />}
-    />
+    <View style={styles.screen}>
+      <TextInput
+        style={styles.searchInput}
+        placeholder="Search by ingredients (comma-separated)..."
+        placeholderTextColor="#ffffff"
+        onChangeText={setSearchText}
+        value={searchText}
+      />
+      <FlatList
+        data={filteredMeals}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => <RenderItem item={item} />}
+      />
+    </View>
   );
 };
 
@@ -35,6 +56,14 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 20,
+  },
+  searchInput: {
+    marginBottom: 10,
+    padding: 10,
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#ccc',
+    color:'white'
   },
   mealContainer: {
     margin: 16,
