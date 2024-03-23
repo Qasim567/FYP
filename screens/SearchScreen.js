@@ -53,17 +53,21 @@ function SearchScreen() {
             },
           });
 
-          let combinedPredictions = { ...response1.data };
+          // let response3 = await axios.post('http://192.168.0.103:5000/predict', formData, {
+          //   headers: {
+          //     'Content-Type': 'multipart/form-data',
+          //   },
+          // });
 
-          for (const [className, prediction] of Object.entries(response2.data)) {
-            if (combinedPredictions[className]) {
-              if (prediction.confidence > combinedPredictions[className].confidence) {
+          let combinedPredictions = {};
+
+          [response1, response2].forEach(response => {
+            for (const [className, prediction] of Object.entries(response.data)) {
+              if (!combinedPredictions[className] || prediction.confidence > combinedPredictions[className].confidence) {
                 combinedPredictions[className] = prediction;
               }
-            } else {
-              combinedPredictions[className] = prediction;
             }
-          }
+          });
 
           setPredictionResult(combinedPredictions);
         } catch (axiosError) {
