@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, Image, StyleSheet, Pressable, TextInput, Modal, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { Entypo } from '@expo/vector-icons';
+import { MEALS, CATEGORIES } from '../data/bakery-data';
 
 const RenderItem = ({ item }) => {
   const navigation = useNavigation();
@@ -25,7 +26,23 @@ const MealsScreen = ({ route }) => {
   const [searchText, setSearchText] = useState('');
   const [showIngredientsModal, setShowIngredientsModal] = useState(false);
   const [selectedIngredients, setSelectedIngredients] = useState([]);
-  const [ingredientsList, setIngredientsList] = useState(['Eggs', 'Sugar', 'Flour', 'Butter', 'Salt', 'Vanilla Extract']);
+  const [ingredientsList, setIngredientsList] = useState([]);
+
+  useEffect(() => {
+    const allIngredients = meals.reduce((acc, meal) => {
+      if (meal.ingredients) {
+        meal.ingredients.forEach(ingredient => {
+          if (!acc.includes(ingredient)) {
+            acc.push(ingredient);
+          }
+        });
+      }
+      return acc;
+    }, []);
+    setIngredientsList(allIngredients);
+  }, [meals]);
+
+  const filteredMeal = MEALS.filter(meal => meal.categoryIds.includes(CATEGORIES.id));
 
   const handleIngredientSelection = (ingredient) => {
     setSelectedIngredients([...selectedIngredients, ingredient]);
@@ -54,9 +71,6 @@ const MealsScreen = ({ route }) => {
   
     return containsSelectedIngredients && matchesSearchText;
   });
-  
-  
-  
 
   return (
     <View style={styles.screen}>
