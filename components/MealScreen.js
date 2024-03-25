@@ -56,7 +56,7 @@ const MealsScreen = ({ route }) => {
 
   const filteredMeals = meals.filter(meal => {
     const containsSelectedIngredients = selectedIngredients.length === 0 || 
-      selectedIngredients.every(selectedIngredient =>
+      selectedIngredients.some(selectedIngredient =>
         meal.ingredients && meal.ingredients.some(ingredient =>
           ingredient.toLowerCase().includes(selectedIngredient.toLowerCase())
         )
@@ -67,9 +67,9 @@ const MealsScreen = ({ route }) => {
         ingredient.toLowerCase().includes(searchText.toLowerCase())
       );
   
-    return containsSelectedIngredients && matchesSearchText;
+    return containsSelectedIngredients || matchesSearchText;
   });
-
+  
   return (
     <View style={styles.screen}>
       <View style={styles.searchBar}>
@@ -123,6 +123,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '#ccc',
+    color:'white'
   },
   filterButton: {
     paddingBottom: 10,
@@ -148,7 +149,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'black',
+    backgroundColor: '#C0C0C0',
   },
   modalContent: {
     backgroundColor: 'white',
