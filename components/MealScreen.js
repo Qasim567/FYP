@@ -55,20 +55,23 @@ const MealsScreen = ({ route }) => {
   );
 
   const filteredMeals = meals.filter(meal => {
-    const containsSelectedIngredients = selectedIngredients.length === 0 || 
-      selectedIngredients.some(selectedIngredient =>
-        meal.ingredients && meal.ingredients.some(ingredient =>
-          ingredient.toLowerCase().includes(selectedIngredient.toLowerCase())
-        )
-      );
+    const containsSelectedIngredients = selectedIngredients.length === 0 ||
+  meal.ingredients &&
+  selectedIngredients.some(selectedIngredient =>
+    meal.ingredients.some(ingredient =>
+      ingredient.toLowerCase().includes(selectedIngredient.toLowerCase())
+    )
+  );
+
   
     const matchesSearchText = searchText.trim() === '' ||
       meal.ingredients && meal.ingredients.some(ingredient =>
         ingredient.toLowerCase().includes(searchText.toLowerCase())
       );
   
-    return containsSelectedIngredients || matchesSearchText;
+    return (containsSelectedIngredients && matchesSearchText) || searchText.trim() === '';
   });
+  
   
   return (
     <View style={styles.screen}>
