@@ -42,8 +42,6 @@ const MealsScreen = ({ route }) => {
     setIngredientsList(allIngredients);
   }, [meals]);
 
-  const filteredMeal = MEALS.filter(meal => meal.categoryIds.includes(CATEGORIES.id));
-
   const handleIngredientSelection = (ingredient) => {
     setSelectedIngredients([...selectedIngredients, ingredient]);
     setSearchText(searchText ? `${searchText}, ${ingredient}` : ingredient);
@@ -82,19 +80,22 @@ const MealsScreen = ({ route }) => {
           onChangeText={setSearchText}
         />
         <TouchableOpacity onPress={() => setShowIngredientsModal(true)} style={styles.filterButton}>
-          <Entypo name="menu" size={24} color="black" />
+          <Entypo name="menu" size={28} color="white" />
         </TouchableOpacity>
       </View>
       <Modal visible={showIngredientsModal} animationType="slide">
-        <View style={styles.modalContent}>
-          <FlatList
-            data={ingredientsList}
-            renderItem={renderIngredientItem}
-            keyExtractor={(item) => item}
-          />
-          <TouchableOpacity onPress={() => setShowIngredientsModal(false)}>
-            <Text style={styles.closeButton}>Close</Text>
-          </TouchableOpacity>
+        <View style={styles.modalContainer}>
+          <View style={styles.modalContent}>
+            <Text style={styles.modalHeading}>Select Ingredients</Text>
+            <FlatList
+              data={ingredientsList}
+              renderItem={renderIngredientItem}
+              keyExtractor={(item) => item}
+            />
+            <TouchableOpacity onPress={() => setShowIngredientsModal(false)} style={styles.closeButton}>
+              <Text style={styles.modalCloseText}>Close</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </Modal>
       <FlatList
@@ -124,7 +125,7 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
   },
   filterButton: {
-    padding: 10,
+    paddingBottom: 10,
   },
   mealContainer: {
     margin: 16,
@@ -143,20 +144,39 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
-  modalContent: {
+  modalContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fff',
+    backgroundColor: 'black',
+  },
+  modalContent: {
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 10,
+    elevation: 5,
   },
   ingredientItem: {
     padding: 10,
-    fontSize: 18,
+    fontSize: 12,
+  },
+  modalHeading: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    textAlign: 'center',
   },
   closeButton: {
     marginTop: 20,
-    fontSize: 18,
-    color: 'blue',
+    padding: 10,
+    backgroundColor: '#5e2c04',
+    borderRadius: 8,
+    alignSelf: 'center',
+  },
+  modalCloseText: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
 
