@@ -2,10 +2,10 @@ import Category from '../models/category';
 import Meal from '../models/meal';
 export const CATEGORIES = [
 	new Category('c1', 'Cakes', 'https://images.unsplash.com/photo-1605807646983-377bc5a76493?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNha2VzfGVufDB8fDB8fHww'),
-	new Category('c2', 'Cookies', 'https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=600'),
-	new Category('c3', 'Pastries', 'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=600'),
+	new Category('c2', 'Cookies', 'https://www.ambitiouskitchen.com/wp-content/uploads/2016/10/AK-Brown-Butter-CCCs-2-1.jpg'),
+	new Category('c3', 'Pastries', 'https://thecococompany.com/cdn/shop/products/Chocolate-Truffle-Pastries_grande.jpg?v=1577958105'),
 	new Category('c4', 'Sandwiches', 'https://img.freepik.com/premium-photo/two-sandwiches-made-slice-meat-cheese-tomatoes-toasted-bread-wooden-table_244366-394.jpg?size=626&ext=jpg&ga=GA1.1.261527264.1696249506&semt=ais'),
-	new Category('c5', 'Donuts', 'https://images.pexels.com/photos/2955820/pexels-photo-2955820.jpeg?auto=compress&cs=tinysrgb&w=600'),
+	new Category('c5', 'Donuts', 'https://images.unsplash.com/photo-1579761314336-f27ea6297ae1?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRvbnV0fGVufDB8fDB8fHww'),
 	new Category('c6', 'Bread and Buns', 'https://c4.wallpaperflare.com/wallpaper/681/930/507/bread-rye-bread-baked-goods-baguette-wallpaper-preview.jpg'),
 	new Category('c7', 'Sweets', 'https://media.istockphoto.com/id/1054228718/photo/indian-sweets-in-a-plate-includes-gulab-jamun-rasgulla-kaju-katli-morichoor-bundi-laddu.webp?b=1&s=170667a&w=0&k=20&c=twNV7dVu6JUDKtnHBECoBwZxVq6gg9SlGJu1-O4h1u0='),
 	new Category('c8', 'Pizza', 'https://www.southernliving.com/thmb/3x3cJaiOvQ8-3YxtMQX0vvh1hQw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2652401_QFSSL_SupremePizza_00072-d910a935ba7d448e8c7545a963ed7101.jpg'),

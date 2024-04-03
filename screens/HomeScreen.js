@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FlatList, StyleSheet, View, Text, Image, Dimensions } from 'react-native';
+import { FlatList, StyleSheet, View, Text, Image, Dimensions, Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { CATEGORIES, MEALS } from '../data/bakery-data';
 import CategoryGrid from '../components/CategoryGrid';
@@ -12,6 +12,10 @@ function HomeScreen() {
     navigation.navigate('ItemOverView', { meals: mealsInCategory, title });
   }
 
+  const navigateTo = () => {
+    navigation.navigate('Homeie');
+  };
+
   return (
     <View style={styles.container}>
        <View style={styles.imageview}>
@@ -22,7 +26,9 @@ function HomeScreen() {
                 />
         </View>
         <View style={styles.txtview}>
-        <Text style={styles.headertxt}>Discover Our Tasty Treats. Welcome!</Text>
+        <Pressable onPress={navigateTo}>
+          <Text style={styles.btntxt}>Search Your Item</Text>
+        </Pressable>
         </View>
         <FlatList 
         data={CATEGORIES}
@@ -51,6 +57,18 @@ const styles=StyleSheet.create({
 image: {
     width: '100%',
     height: '100%',
+},
+btntxt:{
+  textAlign:'center',
+  backgroundColor:'blue',
+  marginHorizontal:90,
+  marginTop:15,
+  fontSize:20,
+  color:'white',
+  borderRadius:30,
+  fontWeight:'bold',
+  fontStyle:'italic',
+  elevation:10
 },
 txtview:{
   flex:0.15,

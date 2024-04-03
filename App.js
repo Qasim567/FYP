@@ -17,6 +17,8 @@ import FavoriteScreen from "./screens/FavrouiteScreen"
 import ProfileScreen from './screens/ProfileScreen';
 import MealsScreen from './components/MealScreen';
 import MealDetailScreen from './components/MealDetailScreen';
+import Home from './API/Home';
+import RecipeDetail from './API/RecipeDetail';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -130,6 +132,14 @@ export default function App() {
               headerStyle: { backgroundColor: '#351401' },
               headerTintColor: 'white',
               contentStyle: { backgroundColor: '#3f2f25' },
+            }} />
+            <Stack.Screen component={Home} name='Homeie'
+            options={{
+              headerShown: false
+            }} />
+            <Stack.Screen component={RecipeDetail} name='Recipe'
+            options={{
+              headerShown: false
             }} />
         </Stack.Navigator>
       </NavigationContainer>
