@@ -41,13 +41,13 @@ function SearchScreen() {
 
         try {
           console.log('Sending Axios request...');
-          let response1 = await axios.post('http://192.168.0.103:5000/predict_model1', formData, {
+          let response1 = await axios.post('http://192.168.0.105:5000/predict_model1', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
           });
 
-          let response2 = await axios.post('http://192.168.0.103:5000/predict_model2', formData, {
+          let response2 = await axios.post('http://192.168.0.105:5000/predict_model2', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },

@@ -21,7 +21,7 @@ const Home = () => {
   }, [query]);
 
   const handleButtonPress = (recipe) => {
-    navigation.navigate('RecipeDetail', { recipe});
+    navigation.navigate('Recipe', { recipe});
   };
 
   const getRecipes = async () => {
@@ -187,6 +187,7 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
     borderRadius: 5,
     padding: 10,
+    color:'white'
   },
   searchButton: {
     backgroundColor: 'blue',

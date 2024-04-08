@@ -23,86 +23,17 @@ const RenderItem = ({ item }) => {
 
 const MealsScreen = ({ route }) => {
   const { meals } = route.params;
-  const [searchText, setSearchText] = useState('');
-  const [showIngredientsModal, setShowIngredientsModal] = useState(false);
-  const [selectedIngredients, setSelectedIngredients] = useState([]);
-  const [ingredientsList, setIngredientsList] = useState([]);
 
-  useEffect(() => {
-    const allIngredients = meals.reduce((acc, meal) => {
-      if (meal.ingredients) {
-        meal.ingredients.forEach(ingredient => {
-          if (!acc.includes(ingredient)) {
-            acc.push(ingredient);
-          }
-        });
-      }
-      return acc;
-    }, []);
-    setIngredientsList(allIngredients);
-  }, [meals]);
+ 
 
-  const handleIngredientSelection = (ingredient) => {
-    setSelectedIngredients([...selectedIngredients, ingredient]);
-    setSearchText(searchText ? `${searchText}, ${ingredient}` : ingredient);
-    setShowIngredientsModal(false);
-  };
 
-  const renderIngredientItem = ({ item }) => (
-    <TouchableOpacity onPress={() => handleIngredientSelection(item)}>
-      <Text style={styles.ingredientItem}>{item}</Text>
-    </TouchableOpacity>
-  );
 
-  const filteredMeals = meals.filter(meal => {
-    const containsSelectedIngredients = selectedIngredients.length === 0 ||
-  meal.ingredients &&
-  selectedIngredients.some(selectedIngredient =>
-    meal.ingredients.some(ingredient =>
-      ingredient.toLowerCase().includes(selectedIngredient.toLowerCase())
-    )
-  );
-
-  
-    const matchesSearchText = searchText.trim() === '' ||
-      meal.ingredients && meal.ingredients.some(ingredient =>
-        ingredient.toLowerCase().includes(searchText.toLowerCase())
-      );
-  
-    return (containsSelectedIngredients && matchesSearchText) || searchText.trim() === '';
-  });
   
   
   return (
     <View style={styles.screen}>
-      <View style={styles.searchBar}>
-        <TextInput
-          style={styles.searchInput}
-          placeholder="Search by ingredients..."
-          value={searchText}
-          onChangeText={setSearchText}
-        />
-        <TouchableOpacity onPress={() => setShowIngredientsModal(true)} style={styles.filterButton}>
-          <Entypo name="menu" size={28} color="white" />
-        </TouchableOpacity>
-      </View>
-      <Modal visible={showIngredientsModal} animationType="slide">
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            <Text style={styles.modalHeading}>Select Ingredients</Text>
-            <FlatList
-              data={ingredientsList}
-              renderItem={renderIngredientItem}
-              keyExtractor={(item) => item}
-            />
-            <TouchableOpacity onPress={() => setShowIngredientsModal(false)} style={styles.closeButton}>
-              <Text style={styles.modalCloseText}>Close</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
       <FlatList
-        data={filteredMeals}
+        data={meals}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <RenderItem item={item} />}
       />
