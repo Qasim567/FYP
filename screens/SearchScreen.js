@@ -41,11 +41,6 @@ function SearchScreen() {
 
         try {
           console.log('Sending Axios request...');
-          let response1 = await axios.post('http://192.168.0.105:5000/predict_model1', formData, {
-            headers: {
-              'Content-Type': 'multipart/form-data',
-            },
-          });
 
           let response2 = await axios.post('http://192.168.0.105:5000/predict_model2', formData, {
             headers: {
@@ -53,23 +48,27 @@ function SearchScreen() {
             },
           });
 
-          // let response3 = await axios.post('http://192.168.0.103:5000/predict', formData, {
-          //   headers: {
-          //     'Content-Type': 'multipart/form-data',
-          //   },
-          // });
+          let response1 = await axios.post('http://192.168.0.105:5000/predict_model1', formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data',
+            },
+          });
 
-          let combinedPredictions = {};
+          let highestConfidencePrediction = null;
 
           [response1, response2].forEach(response => {
             for (const [className, prediction] of Object.entries(response.data)) {
-              if (!combinedPredictions[className] || prediction.confidence > combinedPredictions[className].confidence) {
-                combinedPredictions[className] = prediction;
+              if (!highestConfidencePrediction || prediction.confidence > highestConfidencePrediction.confidence) {
+                highestConfidencePrediction = {
+                  className,
+                  count: prediction.count,
+                  confidence: prediction.confidence
+                };
               }
             }
           });
 
-          setPredictionResult(combinedPredictions);
+          setPredictionResult(highestConfidencePrediction);
         } catch (axiosError) {
           console.error('Axios Error:', axiosError);
           setError('Error during image prediction. Please try again.');
@@ -92,12 +91,8 @@ function SearchScreen() {
         {imageUri && <Image source={{ uri: imageUri }} style={styles.imagePreview} />}
         {predictionResult && (
           <View style={styles.resultContainer}>
-            {Object.entries(predictionResult).map(([className, { count, confidence }], index) => (
-              <View key={index}>
-                <Text style={styles.resultText}>Item: {className}</Text>
-                <Text style={styles.resultText}>{`Confidence: ${confidence}`}</Text>
-              </View>
-            ))}
+            <Text style={styles.resultText}>Item: {predictionResult.className}</Text>
+            <Text style={styles.resultText}>{`Confidence: ${predictionResult.confidence}`}</Text>
           </View>
         )}
         {error && <Text style={styles.errorText}>{error}</Text>}
