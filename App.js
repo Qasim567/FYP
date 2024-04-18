@@ -139,11 +139,13 @@ export default function App() {
             }} />
             <Stack.Screen component={RecipeDetail} name='Recipe'
             options={{
-              headerShown: false
+              headerStyle: { backgroundColor: '#351401' },
+              headerTintColor: 'white',
+              contentStyle: { backgroundColor: '#3f2f25' },
             }} />
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar style='light' />
+      <StatusBar style='dark' />
     </View>
     </FavoritesProvider>
   );

@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
-import { Button, Image, View, StyleSheet, Text, ImageBackground } from 'react-native';
-import * as ImagePicker from 'expo-image-picker'; 
-import axios from 'axios';
+import React, { useState } from "react";
+import {
+  Button,
+  Image,
+  View,
+  StyleSheet,
+  Text,
+  ImageBackground,
+} from "react-native";
+import * as ImagePicker from "expo-image-picker";
+import axios from "axios";
 
 function SearchScreen() {
   const [imageUri, setImageUri] = useState(null);
@@ -33,36 +40,76 @@ function SearchScreen() {
         const imageType = selectedAsset.mediaType;
 
         let formData = new FormData();
-        formData.append('image', {
+        formData.append("image", {
           uri: selectedAsset.uri,
-          type: imageType === 'video' ? 'video/mp4' : 'image/jpeg',
-          name: 'photo.jpg',
+          type: imageType === "video" ? "video/mp4" : "image/jpeg",
+          name: "photo.jpg",
         });
 
         try {
-          console.log('Sending Axios request...');
-
-          let response2 = await axios.post('http://192.168.0.105:5000/predict_model2', formData, {
-            headers: {
-              'Content-Type': 'multipart/form-data',
-            },
-          });
-
-          let response1 = await axios.post('http://192.168.0.105:5000/predict_model1', formData, {
-            headers: {
-              'Content-Type': 'multipart/form-data',
-            },
-          });
+          console.log("Sending Axios requests...");
+          let responses = await Promise.all([
+            axios.post("http://192.168.0.105:5000/predict_model1", formData, {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }),
+            axios.post("http://192.168.0.105:5000/predict_model2", formData, {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }),
+            axios.post("http://192.168.0.105:5000/predict_model3", formData, {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }),
+            axios.post("http://192.168.0.105:5000/predict_model4", formData, {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }),
+            axios.post("http://192.168.0.105:5000/predict_model5", formData, {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }),
+            axios.post("http://192.168.0.105:5000/predict_model6", formData, {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }),
+            axios.post("http://192.168.0.105:5000/predict_model7", formData, {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }),
+            axios.post("http://192.168.0.105:5000/predict_model8", formData, {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }),
+            axios.post("http://192.168.0.105:5000/predict_model9", formData, {
+              headers: {
+                "Content-Type": "multipart/form-data",
+              },
+            }),
+          ]);
 
           let highestConfidencePrediction = null;
 
-          [response1, response2].forEach(response => {
-            for (const [className, prediction] of Object.entries(response.data)) {
-              if (!highestConfidencePrediction || prediction.confidence > highestConfidencePrediction.confidence) {
+          responses.forEach((response) => {
+            for (const [className, prediction] of Object.entries(
+              response.data
+            )) {
+              if (
+                !highestConfidencePrediction ||
+                prediction.confidence > highestConfidencePrediction.confidence
+              ) {
                 highestConfidencePrediction = {
                   className,
                   count: prediction.count,
-                  confidence: prediction.confidence
+                  confidence: prediction.confidence,
                 };
               }
             }
@@ -70,29 +117,35 @@ function SearchScreen() {
 
           setPredictionResult(highestConfidencePrediction);
         } catch (axiosError) {
-          console.error('Axios Error:', axiosError);
-          setError('Error during image prediction. Please try again.');
+          console.error("Axios Error:", axiosError);
+          setError("Error during image prediction. Please try again.");
         }
       }
     } catch (error) {
-      console.error('Error during image selection:', error);
-      setError('Error during image selection. Please try again.');
+      console.error("Error during image selection:", error);
+      setError("Error during image selection. Please try again.");
     }
   };
 
   return (
     <ImageBackground
       style={styles.background}
-      source={require('../assets/cookie.jpg')}
+      source={require("../assets/cookie.jpg")}
       resizeMode="cover"
     >
       <View style={styles.container}>
-        <Text style={styles.hetext}>Let's identify an {'\n'} item</Text>
-        {imageUri && <Image source={{ uri: imageUri }} style={styles.imagePreview} />}
+        <Text style={styles.hetext}>Let's identify an {"\n"} item</Text>
+        {imageUri && (
+          <Image source={{ uri: imageUri }} style={styles.imagePreview} />
+        )}
         {predictionResult && (
           <View style={styles.resultContainer}>
-            <Text style={styles.resultText}>Item: {predictionResult.className}</Text>
-            <Text style={styles.resultText}>{`Confidence: ${predictionResult.confidence}`}</Text>
+            <Text style={styles.resultText}>
+              Item: {predictionResult.className}
+            </Text>
+            <Text
+              style={styles.resultText}
+            >{`Confidence: ${predictionResult.confidence}`}</Text>
           </View>
         )}
         {error && <Text style={styles.errorText}>{error}</Text>}
@@ -117,43 +170,43 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   imagePreview: {
     width: 300,
     height: 300,
-    alignSelf: 'center',
+    alignSelf: "center",
     marginVertical: 10,
   },
   resultContainer: {
     marginTop: 10,
-    alignItems: 'center',
+    alignItems: "center",
   },
   resultText: {
     fontSize: 16,
     marginVertical: 5,
-    textAlign: 'center',
-    fontWeight:'bold',
-    color:'white'
+    textAlign: "center",
+    fontWeight: "bold",
+    color: "white",
   },
   errorText: {
-    color: 'red',
+    color: "red",
     fontSize: 16,
     marginVertical: 10,
   },
   buttonContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    width: '100%',
+    flexDirection: "row",
+    justifyContent: "space-around",
+    width: "100%",
     marginTop: 20,
   },
-  hetext:{
-    fontSize:30,
-    textAlign:'center',
-    fontStyle:'italic',
-    fontWeight:'bold'
-  }
+  hetext: {
+    fontSize: 30,
+    textAlign: "center",
+    fontStyle: "italic",
+    fontWeight: "bold",
+  },
 });
 
 export default SearchScreen;

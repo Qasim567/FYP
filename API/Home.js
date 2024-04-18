@@ -21,8 +21,9 @@ const Home = () => {
   }, [query]);
 
   const handleButtonPress = (recipe) => {
-    navigation.navigate('Recipe', { recipe});
+    navigation.navigate('Recipe', { recipeLabel: recipe.label, recipe });
   };
+  
 
   const getRecipes = async () => {
     try {
@@ -89,6 +90,7 @@ const Home = () => {
         <TextInput
           style={styles.searchBar}
           placeholder="Search"
+          placeholderTextColor="white"
           value={search}
           onChangeText={setSearch}
         />
@@ -117,7 +119,7 @@ const Home = () => {
             </Pressable>
           ))
         ) : (
-          <Text style={styles.noRecipesText}>No recipes found.</Text>
+          <Text style={{color:'white',textAlign:'center'}}>No recipes found.</Text>
         )}
       </ScrollView>
       <Modal
