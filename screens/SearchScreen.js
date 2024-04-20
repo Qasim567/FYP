@@ -146,11 +146,11 @@ function SearchScreen() {
         {predictionResult && (
           <View style={styles.resultContainer}>
             <Text style={styles.resultText}>
-              Item: {predictionResult.className}
+              {predictionResult.className}
             </Text>
             <Text
               style={styles.resultText}
-            >{`Confidence: ${predictionResult.confidence}`}</Text>
+            >{`Confidence: ${predictionResult.confidence.toFixed(2)}`}</Text>
           </View>
         )}
         {error && <Text style={styles.errorText}>{error}</Text>}
