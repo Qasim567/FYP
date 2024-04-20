@@ -5,22 +5,22 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 const RecipeDetail = ({ route }) => {
   const { recipe, recipeLabel } = route.params;
-  const [isFavorite, setIsFavorite] = useState(isFavorite);
+  // const [isFavorite, setIsFavorite] = useState(isFavorite);
 
   const navigation = useNavigation();
 
   useLayoutEffect(() => {
     navigation.setOptions({
       title: recipeLabel,
-      headerRight: () => (
-        <Icon
-          name={isFavorite ? 'star' : 'star-outline'}
-          size={30}
-          color="white"
-          style={styles.favoriteIcon}
-          // onPress={handleToggleFavorite}
-        />
-      ),
+      // headerRight: () => (
+      //   <Icon
+      //     name={isFavorite ? 'star' : 'star-outline'}
+      //     size={30}
+      //     color="white"
+      //     style={styles.favoriteIcon}
+      //     // onPress={handleToggleFavorite}
+      //   />
+      // ),
     });
   }, [navigation, recipeLabel]);
   return (
