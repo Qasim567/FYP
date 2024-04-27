@@ -49,52 +49,52 @@ function SearchScreen() {
         try {
           console.log("Sending Axios requests...");
           let responses = await Promise.all([
-            axios.post("http://192.168.0.103:5000/predict_model1", formData, {
+            axios.post("http://192.168.0.101:5000/predict_model1", formData, {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
             }),
-            axios.post("http://192.168.0.103:5000/predict_model2", formData, {
+            axios.post("http://192.168.0.101:5000/predict_model2", formData, {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
             }),
-            axios.post("http://192.168.0.103:5000/predict_model3", formData, {
+            axios.post("http://192.168.0.101:5000/predict_model3", formData, {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
             }),
-            axios.post("http://192.168.0.103:5000/predict_model4", formData, {
+            axios.post("http://192.168.0.101:5000/predict_model4", formData, {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
             }),
-            axios.post("http://192.168.0.103:5000/predict_model5", formData, {
+            axios.post("http://192.168.0.101:5000/predict_model5", formData, {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
             }),
-            axios.post("http://192.168.0.103:5000/predict_model6", formData, {
+            axios.post("http://192.168.0.101:5000/predict_model6", formData, {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
             }),
-            axios.post("http://192.168.0.103:5000/predict_model7", formData, {
+            axios.post("http://192.168.0.101:5000/predict_model7", formData, {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
             }),
-            axios.post("http://192.168.0.103:5000/predict_model8", formData, {
+            axios.post("http://192.168.0.101:5000/predict_model8", formData, {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
             }),
-            axios.post("http://192.168.0.103:5000/predict_model9", formData, {
+            axios.post("http://192.168.0.101:5000/predict_model9", formData, {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
             }),
-            axios.post("http://192.168.0.103:5000/predict_model10", formData, {
+            axios.post("http://192.168.0.101:5000/predict_model10", formData, {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
