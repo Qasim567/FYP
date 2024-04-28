@@ -145,7 +145,7 @@ export default function App() {
             }} />
         </Stack.Navigator>
       </NavigationContainer>
-      <StatusBar style='dark' />
+      <StatusBar style='light' />
     </View>
     </FavoritesProvider>
   );
