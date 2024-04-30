@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Button,
   Image,
@@ -6,6 +6,8 @@ import {
   StyleSheet,
   Text,
   ImageBackground,
+  Modal,
+  TouchableOpacity,
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import axios from "axios";
@@ -14,21 +16,45 @@ function SearchScreen() {
   const [imageUri, setImageUri] = useState(null);
   const [predictionResult, setPredictionResult] = useState(null);
   const [error, setError] = useState(null);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedModel, setSelectedModel] = useState(null);
+  const [isCamera, setIsCamera] = useState(false);
+  const [shouldSelectImage, setShouldSelectImage] = useState(false);
+
+  useEffect(() => {
+    if (shouldSelectImage) {
+      handleImageSelection();
+      setShouldSelectImage(false);
+    }
+  }, [shouldSelectImage]);
 
   const handlePressButtonAsync = async (isCamera) => {
+    setIsCamera(isCamera);
+    setModalVisible(true);
+  };
+
+  const handleModelSelect = (modelNumber) => {
+    setSelectedModel(modelNumber);
+    setModalVisible(false);
+    setShouldSelectImage(true);
+  };
+
+  const handleImageSelection = async () => {
+    setPredictionResult(null); 
+    setError(null); 
     try {
       let result;
       if (isCamera) {
         result = await ImagePicker.launchCameraAsync({
           mediaTypes: ImagePicker.MediaTypeOptions.Images,
-          allowsEditing: false,
+          allowsEditing: true,
           aspect: [4, 3],
           quality: 1,
         });
       } else {
         result = await ImagePicker.launchImageLibraryAsync({
           mediaTypes: ImagePicker.MediaTypeOptions.Images,
-          allowsEditing: false,
+          allowsEditing: true,
           aspect: [4, 3],
           quality: 1,
         });
@@ -47,78 +73,33 @@ function SearchScreen() {
         });
 
         try {
-          console.log("Sending Axios requests...");
-          let responses = await Promise.all([
-            axios.post("http://192.168.0.101:5000/predict_model1", formData, {
+          console.log("Sending Axios request for model:", selectedModel);
+          const response = await axios.post(
+            `http://192.168.0.101:5000/predict_model${selectedModel}`,
+            formData,
+            {
               headers: {
                 "Content-Type": "multipart/form-data",
               },
-            }),
-            axios.post("http://192.168.0.101:5000/predict_model2", formData, {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            }),
-            axios.post("http://192.168.0.101:5000/predict_model3", formData, {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            }),
-            axios.post("http://192.168.0.101:5000/predict_model4", formData, {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            }),
-            axios.post("http://192.168.0.101:5000/predict_model5", formData, {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            }),
-            axios.post("http://192.168.0.101:5000/predict_model6", formData, {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            }),
-            axios.post("http://192.168.0.101:5000/predict_model7", formData, {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            }),
-            axios.post("http://192.168.0.101:5000/predict_model8", formData, {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            }),
-            axios.post("http://192.168.0.101:5000/predict_model9", formData, {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            }),
-            axios.post("http://192.168.0.101:5000/predict_model10", formData, {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            }),
-          ]);
+            }
+          );
 
           let highestConfidencePrediction = null;
 
-          responses.forEach((response) => {
-            for (const [className, prediction] of Object.entries(
-              response.data
-            )) {
-              if (
-                !highestConfidencePrediction ||
-                prediction.confidence > highestConfidencePrediction.confidence
-              ) {
-                highestConfidencePrediction = {
-                  className,
-                  count: prediction.count,
-                  confidence: prediction.confidence,
-                };
-              }
+          for (const [className, prediction] of Object.entries(
+            response.data
+          )) {
+            if (
+              !highestConfidencePrediction ||
+              prediction.confidence > highestConfidencePrediction.confidence
+            ) {
+              highestConfidencePrediction = {
+                className,
+                count: prediction.count,
+                confidence: prediction.confidence,
+              };
             }
-          });
+          }
 
           setPredictionResult(highestConfidencePrediction);
         } catch (axiosError) {
@@ -164,6 +145,33 @@ function SearchScreen() {
             onPress={() => handlePressButtonAsync(true)}
           />
         </View>
+        <Modal
+  animationType="slide"
+  transparent={true}
+  visible={modalVisible}
+  onRequestClose={() => {
+    setModalVisible(false);
+    setIsCamera(false);
+  }}
+>
+  <View style={styles.centeredView}>
+    <View style={styles.modalView}>
+      <Text style={styles.modalText}>Select Category</Text>
+      <View style={styles.modelButtonContainer}>
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((modelNumber) => (
+          <TouchableOpacity
+            key={modelNumber}
+            style={styles.modelButton}
+            onPress={() => handleModelSelect(modelNumber)}
+          >
+            <Text style={styles.modelButtonText}>{`Model ${modelNumber}`}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+    </View>
+  </View>
+</Modal>
+
       </View>
     </ImageBackground>
   );
@@ -211,6 +219,44 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontStyle: "italic",
     fontWeight: "bold",
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalText:{
+    fontWeight:'bold',
+    fontSize:18
+  },
+  modalView: {
+    margin: 50,
+    backgroundColor: "lightgray",
+    borderRadius: 20,
+    padding: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    elevation:7
+  },
+  modelButtonContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    marginTop: 20,
+    width: "100%",
+  },
+  modelButton: {
+    backgroundColor: "#351401",
+    borderRadius: 10,
+    padding: 10,
+    elevation: 2,
+    marginBottom: 10,
+    width: "30%", 
+  },
+  modelButtonText: {
+    color: "white",
+    fontWeight: "bold",
+    textAlign: "center",
   },
 });
 
