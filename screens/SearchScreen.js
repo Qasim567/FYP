@@ -40,8 +40,8 @@ function SearchScreen() {
   };
 
   const handleImageSelection = async () => {
-    setPredictionResult(null); 
-    setError(null); 
+    setPredictionResult(null);
+    setError(null);
     try {
       let result;
       if (isCamera) {
@@ -59,19 +59,19 @@ function SearchScreen() {
           quality: 1,
         });
       }
-
+  
       if (!result.canceled) {
         const selectedAsset = result.assets[0];
         setImageUri(selectedAsset.uri);
         const imageType = selectedAsset.mediaType;
-
+  
         let formData = new FormData();
         formData.append("image", {
           uri: selectedAsset.uri,
           type: imageType === "video" ? "video/mp4" : "image/jpeg",
           name: "photo.jpg",
         });
-
+  
         try {
           console.log("Sending Axios request for model:", selectedModel);
           const response = await axios.post(
@@ -83,25 +83,33 @@ function SearchScreen() {
               },
             }
           );
-
-          let highestConfidencePrediction = null;
-
-          for (const [className, prediction] of Object.entries(
-            response.data
-          )) {
-            if (
-              !highestConfidencePrediction ||
-              prediction.confidence > highestConfidencePrediction.confidence
-            ) {
-              highestConfidencePrediction = {
-                className,
-                count: prediction.count,
-                confidence: prediction.confidence,
-              };
+  
+          if (Object.keys(response.data).length === 0) {
+            setPredictionResult({
+              className: "Not a bakery item",
+              confidence: 0,
+            });
+          } else {
+            let highestConfidencePrediction = null;
+  
+            for (const [className, prediction] of Object.entries(
+              response.data
+            )) {
+              if (
+                !highestConfidencePrediction ||
+                prediction.confidence >
+                  highestConfidencePrediction.confidence
+              ) {
+                highestConfidencePrediction = {
+                  className,
+                  count: prediction.count,
+                  confidence: prediction.confidence,
+                };
+              }
             }
+  
+            setPredictionResult(highestConfidencePrediction);
           }
-
-          setPredictionResult(highestConfidencePrediction);
         } catch (axiosError) {
           console.error("Axios Error:", axiosError);
           setError("Error during image prediction. Please try again.");
@@ -112,7 +120,7 @@ function SearchScreen() {
       setError("Error during image selection. Please try again.");
     }
   };
-
+  
   return (
     <ImageBackground
       style={styles.background}
