@@ -158,19 +158,30 @@ function SearchScreen() {
     <View style={styles.modalView}>
       <Text style={styles.modalText}>Select Category</Text>
       <View style={styles.modelButtonContainer}>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((modelNumber) => (
+        {[
+          "Sweets",
+          "Pastry",
+          "Bread",
+          "Cake",
+          "Cookie",
+          "Donut",
+          "Pizza",
+          "Sandwich",
+          "Sandwich"
+        ].map((itemName, index) => (
           <TouchableOpacity
-            key={modelNumber}
+            key={index + 1}
             style={styles.modelButton}
-            onPress={() => handleModelSelect(modelNumber)}
+            onPress={() => handleModelSelect(index + 1)}
           >
-            <Text style={styles.modelButtonText}>{`Model ${modelNumber}`}</Text>
+            <Text style={styles.modelButtonText}>{itemName}</Text>
           </TouchableOpacity>
         ))}
       </View>
     </View>
   </View>
 </Modal>
+
 
       </View>
     </ImageBackground>
@@ -236,7 +247,10 @@ const styles = StyleSheet.create({
     padding: 20,
     alignItems: "center",
     justifyContent: "center",
-    elevation:7
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+    width: "80%",
   },
   modelButtonContainer: {
     flexDirection: "row",
@@ -251,10 +265,11 @@ const styles = StyleSheet.create({
     padding: 10,
     elevation: 2,
     marginBottom: 10,
-    width: "30%", 
+    width: "30%",
   },
   modelButtonText: {
     color: "white",
+    fontSize:12,
     fontWeight: "bold",
     textAlign: "center",
   },
