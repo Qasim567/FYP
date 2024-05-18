@@ -59,23 +59,23 @@ function SearchScreen() {
           quality: 1,
         });
       }
-  
+
       if (!result.canceled) {
         const selectedAsset = result.assets[0];
         setImageUri(selectedAsset.uri);
         const imageType = selectedAsset.mediaType;
-  
+
         let formData = new FormData();
         formData.append("image", {
           uri: selectedAsset.uri,
           type: imageType === "video" ? "video/mp4" : "image/jpeg",
           name: "photo.jpg",
         });
-  
+
         try {
           console.log("Sending Axios request for model:", selectedModel);
           const response = await axios.post(
-            `http://192.168.0.101:5000/predict_model${selectedModel}`,
+            `http://192.168.0.103:5000/predict_model${selectedModel}`,
             formData,
             {
               headers: {
@@ -83,7 +83,7 @@ function SearchScreen() {
               },
             }
           );
-  
+
           if (Object.keys(response.data).length === 0) {
             setPredictionResult({
               className: "Not a bakery item",
@@ -91,7 +91,7 @@ function SearchScreen() {
             });
           } else {
             let highestConfidencePrediction = null;
-  
+
             for (const [className, prediction] of Object.entries(
               response.data
             )) {
@@ -107,7 +107,7 @@ function SearchScreen() {
                 };
               }
             }
-  
+
             setPredictionResult(highestConfidencePrediction);
           }
         } catch (axiosError) {
@@ -120,7 +120,7 @@ function SearchScreen() {
       setError("Error during image selection. Please try again.");
     }
   };
-  
+
   return (
     <ImageBackground
       style={styles.background}
@@ -154,43 +154,51 @@ function SearchScreen() {
           />
         </View>
         <Modal
-  animationType="slide"
-  transparent={true}
-  visible={modalVisible}
-  onRequestClose={() => {
-    setModalVisible(false);
-    setIsCamera(false);
-  }}
->
-  <View style={styles.centeredView}>
-    <View style={styles.modalView}>
-      <Text style={styles.modalText}>Select Category</Text>
-      <View style={styles.modelButtonContainer}>
-        {[
-          "Sweets",
-          "Pastry",
-          "Bread",
-          "Cake",
-          "Cookie",
-          "Donut",
-          "Pizza",
-          "Sandwich",
-          "Sandwich"
-        ].map((itemName, index) => (
-          <TouchableOpacity
-            key={index + 1}
-            style={styles.modelButton}
-            onPress={() => handleModelSelect(index + 1)}
-          >
-            <Text style={styles.modelButtonText}>{itemName}</Text>
-          </TouchableOpacity>
-        ))}
-      </View>
-    </View>
-  </View>
-</Modal>
-
-
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => {
+            setModalVisible(false);
+            setIsCamera(false);
+          }}
+        >
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+              <Text style={styles.modalText}>Select Category</Text>
+              <View style={styles.modelButtonContainer}>
+                {[
+                  "Sweets",
+                  "Pastry",
+                  "Bread",
+                  "Cake",
+                  "Cookie",
+                  "Donut",
+                  "Pizza",
+                  "Sandwich",
+                  "ABC",
+                ].map((itemName, index) => (
+                  <TouchableOpacity
+                    key={index + 1}
+                    style={[
+                      styles.modelButton,
+                      index === 8 && styles.hiddenButton,
+                    ]}
+                    onPress={() => handleModelSelect(index + 1)}
+                  >
+                    <Text
+                      style={[
+                        styles.modelButtonText,
+                        index === 8 && styles.hiddenButtonText,
+                      ]}
+                    >
+                      {itemName}
+                    </Text>
+                  </TouchableOpacity>
+                ))}
+              </View>
+            </View>
+          </View>
+        </Modal>
       </View>
     </ImageBackground>
   );
@@ -244,9 +252,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  modalText:{
-    fontWeight:'bold',
-    fontSize:18
+  modalText: {
+    fontWeight: "bold",
+    fontSize: 18,
   },
   modalView: {
     margin: 50,
@@ -255,8 +263,6 @@ const styles = StyleSheet.create({
     padding: 20,
     alignItems: "center",
     justifyContent: "center",
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
     elevation: 5,
     width: "80%",
   },
@@ -271,15 +277,23 @@ const styles = StyleSheet.create({
     backgroundColor: "#351401",
     borderRadius: 10,
     padding: 10,
-    elevation: 2,
+    // elevation: 2,
     marginBottom: 10,
     width: "30%",
   },
   modelButtonText: {
     color: "white",
-    fontSize:12,
+    fontSize: 12,
     fontWeight: "bold",
     textAlign: "center",
+  },
+  hiddenButton: {
+    backgroundColor: "lightgray",
+    borderColor: "lightgray", // Set border color to match background
+    borderWidth: 1, 
+  },
+  hiddenButtonText: {
+    color: "transparent",
   },
 });
 
