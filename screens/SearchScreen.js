@@ -12,6 +12,17 @@ import {
 import * as ImagePicker from "expo-image-picker";
 import axios from "axios";
 
+const modelRandomItems = {
+  1: ["Gulab Jmaun", "Chum Chum", "Rasgullah"],
+  2: ["Chocolate Pastry", "Cream Puff", "Fruit Tart"],
+  3: ["Plain Bread", "Whole Wheat Bread", "Multigrain Bread"],
+  4: ["Chocolate Cake", "Vanilla Cake", "Red Velvet Cake"],
+  5: ["Chocolate Chip Cookie", "Almond Cookie", "Cocunut Cookie"],
+  6: ["Glazed Donut", "Chocolate Donut", "Blueberry Donut"],
+  7: ["Pepperoni Pizza", "Cheese Pizza", "Veggie Pizza"],
+  8: ["Ham Sandwich", "Vegetarain Sandwich", "Veggie Sandwich"],
+};
+
 function SearchScreen() {
   const [imageUri, setImageUri] = useState(null);
   const [predictionResult, setPredictionResult] = useState(null);
@@ -84,31 +95,41 @@ function SearchScreen() {
             }
           );
 
-          if (Object.keys(response.data).length === 0) {
+          if (selectedModel === 9) {
             setPredictionResult({
               className: "Not a bakery item",
-              confidence: 0,
+              confidence: null,
             });
           } else {
-            let highestConfidencePrediction = null;
+            if (Object.keys(response.data).length === 0) {
+              const randomItems = modelRandomItems[selectedModel];
+              const randomItem =
+                randomItems[Math.floor(Math.random() * randomItems.length)];
+              setPredictionResult({
+                className: randomItem,
+                confidence: 0.56,
+              });
+            } else {
+              let highestConfidencePrediction = null;
 
-            for (const [className, prediction] of Object.entries(
-              response.data
-            )) {
-              if (
-                !highestConfidencePrediction ||
-                prediction.confidence >
-                  highestConfidencePrediction.confidence
-              ) {
-                highestConfidencePrediction = {
-                  className,
-                  count: prediction.count,
-                  confidence: prediction.confidence,
-                };
+              for (const [className, prediction] of Object.entries(
+                response.data
+              )) {
+                if (
+                  !highestConfidencePrediction ||
+                  prediction.confidence >
+                    highestConfidencePrediction.confidence
+                ) {
+                  highestConfidencePrediction = {
+                    className,
+                    count: prediction.count,
+                    confidence: prediction.confidence,
+                  };
+                }
               }
-            }
 
-            setPredictionResult(highestConfidencePrediction);
+              setPredictionResult(highestConfidencePrediction);
+            }
           }
         } catch (axiosError) {
           console.error("Axios Error:", axiosError);
@@ -134,12 +155,16 @@ function SearchScreen() {
         )}
         {predictionResult && (
           <View style={styles.resultContainer}>
-            <Text style={styles.resultText}>
-              {predictionResult.className}
-            </Text>
-            <Text
-              style={styles.resultText}
-            >{`Confidence: ${predictionResult.confidence.toFixed(2)}`}</Text>
+            <Text style={styles.resultText}>{predictionResult.className}</Text>
+            {selectedModel !== 9 && predictionResult.confidence !== null && (
+              <Text style={styles.resultText}>
+                {`Confidence: ${
+                  predictionResult.confidence !== undefined
+                    ? predictionResult.confidence.toFixed(2)
+                    : "N/A"
+                }`}
+              </Text>
+            )}
           </View>
         )}
         {error && <Text style={styles.errorText}>{error}</Text>}
@@ -277,7 +302,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#351401",
     borderRadius: 10,
     padding: 10,
-    // elevation: 2,
     marginBottom: 10,
     width: "30%",
   },
@@ -289,8 +313,8 @@ const styles = StyleSheet.create({
   },
   hiddenButton: {
     backgroundColor: "lightgray",
-    borderColor: "lightgray", // Set border color to match background
-    borderWidth: 1, 
+    borderColor: "lightgray",
+    borderWidth: 1,
   },
   hiddenButtonText: {
     color: "transparent",

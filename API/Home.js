@@ -147,10 +147,11 @@ const Home = () => {
         visible={modalVisible}
         onRequestClose={handleCloseModal}
       >
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
             <ScrollView>
               <Text style={styles.modalTitle}>Allergy Labels</Text>
+              <View style={styles.modelButtonContainer}>
               {allergyLabels.map((label) => (
                 <TouchableOpacity
                   key={label}
@@ -164,7 +165,9 @@ const Home = () => {
                   <Text style={styles.filterButtonText}>{label}</Text>
                 </TouchableOpacity>
               ))}
+              </View>
               <Text style={styles.modalTitle}>Diet Labels</Text>
+              <View style={styles.modelButtonContainer}>
               {dietLabels.map((label) => (
                 <TouchableOpacity
                   key={label}
@@ -178,14 +181,15 @@ const Home = () => {
                   <Text style={styles.filterButtonText}>{label}</Text>
                 </TouchableOpacity>
               ))}
-              <Text style={styles.modalTitle}>Enter Calories Range</Text>
+              </View>
+              {/* <Text style={styles.modalTitle}>Enter Calories Range</Text>
               <TextInput
                 style={styles.caloriesInput}
                 placeholder="Enter Calories"
                 keyboardType="numeric"
                 value={enteredCalories}
                 onChangeText={setEnteredCalories}
-              />
+              /> */}
             </ScrollView>
             <TouchableOpacity
               style={styles.applyButton}
@@ -280,49 +284,78 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginBottom: 3,
   },
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  modalView: {
+    margin: 50,
+    backgroundColor: "lightgray",
+    borderRadius: 20,
+    padding: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    elevation: 5,
+    width: "80%",
+    maxHeight: "80%",
+  },
   modalTitle: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
+    textAlign: "center",
   },
-  caloriesInput: {
-    borderWidth: 1,
-    borderColor: "#ccc",
-    borderRadius: 5,
-    padding: 10,
+  modelButtonContainer: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
     marginBottom: 10,
   },
-  applyButton: {
-    backgroundColor: "blue",
-    padding: 10,
+  filterButton: {
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    backgroundColor: "#F6F6F6",
+    borderRadius: 15,
+    margin: 4,
+  },
+  selectedFilterButton: {
+    backgroundColor: "#C0C0C0",
+  },
+  filterButtonText: {
+    fontSize: 14,
+    color: "#000",
+  },
+  caloriesInput: {
+    height: 40,
+    borderColor: "gray",
+    borderWidth: 1,
+    marginBottom: 10,
+    paddingHorizontal: 10,
     borderRadius: 5,
-    marginTop: 10,
+    width: "100%",
+  },
+  applyButton: {
+    backgroundColor: "green",
+    borderRadius: 20,
+    padding: 10,
+    elevation: 2,
+    marginBottom: 10,
   },
   applyButtonText: {
-    color: "#fff",
+    color: "white",
+    fontWeight: "bold",
     textAlign: "center",
   },
   closeButton: {
     backgroundColor: "red",
+    borderRadius: 20,
     padding: 10,
-    borderRadius: 5,
-    marginTop: 10,
+    elevation: 2,
   },
   closeButtonText: {
-    color: "#fff",
-    textAlign: "center",
-  },
-  filterButton: {
-    backgroundColor: "gray",
-    padding: 10,
-    borderRadius: 5,
-    marginBottom: 10,
-  },
-  selectedFilterButton: {
-    backgroundColor: "blue",
-  },
-  filterButtonText: {
-    color: "#fff",
+    color: "white",
+    fontWeight: "bold",
     textAlign: "center",
   },
 });
